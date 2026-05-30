@@ -739,9 +739,23 @@ html, body {
 }
 
 .selector-pill.pill-menos {
-  background: #242424;
-  border-color: #606060;
-  color: var(--text);
+  background: #6B1A1A;
+  border-color: #C04040;
+  color: #F5DDDD;
+}
+
+/* Row de MENOS — fondo levemente rojizo para distinguirlo del row de MÁS */
+.selector-row-menos {
+  background: rgba(180, 30, 30, 0.06);
+  border-top: 1px solid rgba(192, 64, 64, 0.30);
+}
+
+.selector-row-menos .selector-label {
+  color: #C08080;
+}
+
+.selector-row-menos .selector-label strong {
+  color: #E09090;
 }
 
 /* ════════════════════════════════════════════════════════
