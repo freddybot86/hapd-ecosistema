@@ -19,7 +19,19 @@ const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxSrqekKxbqkzDJrZeC
 
 let pinGerente = null;
 
-/* ─── POST helper ───────────────────────────────────────── */
+/* ─── Helpers de transporte ──────────────────────────────── */
+
+// GET: para validar_candidato y obtener_pin (sin preflight CORS)
+async function getWebApp(params) {
+  const qs  = Object.entries(params)
+    .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
+    .join('&');
+  const res = await fetch(`${WEB_APP_URL}?${qs}`);
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  return res.json();
+}
+
+// POST: solo para guardar_resultados (payload grande, preflight aceptable)
 async function postWebApp(payload) {
   const res = await fetch(WEB_APP_URL, {
     method: 'POST',
@@ -32,7 +44,6 @@ async function postWebApp(payload) {
 /* ─── Acción 1: verificar candidato ─────────────────────── */
 async function verificarCandidato(celular) {
   if (!WEB_APP_URL) {
-    // Modo desarrollo — cualquier número válido pasa como operativo
     return {
       status:    'ok',
       nombre:    'Demo',
@@ -43,7 +54,7 @@ async function verificarCandidato(celular) {
     };
   }
   try {
-    return await postWebApp({ accion: 'validar_candidato', celular });
+    return await getWebApp({ accion: 'validar_candidato', celular });
   } catch {
     return { status: 'error', mensaje: 'Sin conexión. Intenta de nuevo.' };
   }
@@ -57,7 +68,7 @@ async function fetchPin() {
     return;
   }
   try {
-    const data = await postWebApp({ accion: 'obtener_pin', sucursal: session.sucursal });
+    const data = await getWebApp({ accion: 'obtener_pin', sucursal: session.sucursal });
     pinGerente = data.status === 'ok' ? String(data.pin) : '9999';
   } catch {
     pinGerente = '9999';

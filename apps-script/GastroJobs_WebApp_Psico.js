@@ -32,8 +32,15 @@ var PUESTOS_GERENCIALES = [
 // ── Router ───────────────────────────────────────────────────
 
 function doGet(e) {
+  var accion = e.parameter && e.parameter.accion;
+  var res;
+
+  if      (accion === 'validar_candidato') res = validarCandidato(e.parameter.celular);
+  else if (accion === 'obtener_pin')       res = obtenerPin(e.parameter.sucursal);
+  else res = { status: 'ok', msg: 'GastroJobs WebApp Psico activa' };
+
   return ContentService
-    .createTextOutput(JSON.stringify({ status: 'ok', msg: 'GastroJobs WebApp Psico activa' }))
+    .createTextOutput(JSON.stringify(res))
     .setMimeType(ContentService.MimeType.JSON);
 }
 
