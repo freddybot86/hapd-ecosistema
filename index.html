@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>GastroJobs Psico</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       PANTALLA 1 — LOGIN
+  ═══════════════════════════════════════ -->
+  <section id="screen-login" class="screen active">
+    <div class="login-container">
+
+      <header class="login-header">
+        <div class="logo-mark">GJ</div>
+        <h1 class="logo-name">GastroJobs</h1>
+        <p class="logo-sub">Evaluación Psicométrica</p>
+      </header>
+
+      <div class="login-card">
+
+        <div class="field-group">
+          <label class="field-label" for="input-celular">Número de celular</label>
+          <input
+            class="field-input"
+            id="input-celular"
+            type="text"
+            inputmode="numeric"
+            maxlength="10"
+            placeholder="Ej. 5512345678"
+            autocomplete="off"
+          />
+          <p class="field-hint">Ingresa el celular con el que platicaste con Freddy</p>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="input-nombre">Nombre completo</label>
+          <input
+            class="field-input"
+            id="input-nombre"
+            type="text"
+            placeholder="Tu nombre completo"
+            autocomplete="off"
+            autocapitalize="words"
+          />
+        </div>
+
+        <button id="btn-verificar" class="btn-gold" disabled>Verificar</button>
+
+        <div id="login-feedback" class="login-feedback" aria-live="polite"></div>
+
+        <button id="btn-continuar" class="btn-gold" hidden>
+          Continuar &rarr;
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PANTALLA 2 — INSTRUCCIONES
+  ═══════════════════════════════════════ -->
+  <section id="screen-instrucciones" class="screen">
+    <div class="instr-container">
+
+      <!-- S1: Bienvenida -->
+      <div class="instr-section">
+        <p id="instr-saludo" class="instr-saludo"></p>
+        <h2 class="instr-welcome-title">Bienvenido a tu evaluación</h2>
+        <p class="instr-welcome-text">Gracias por postularte con nosotros. Estamos contentos de que hayas llegado hasta aquí y queremos asegurarnos de que tu perfil sea el más indicado para nuestro equipo. A continuación realizarás una serie de ejercicios que nos ayudan a entender cómo te desenvuelves profesionalmente. No hay respuestas correctas ni incorrectas — solo responde con honestidad.</p>
+      </div>
+
+      <!-- S2: Bloques de evaluación -->
+      <div class="instr-section">
+        <h3 class="instr-section-label">Tu evaluación de hoy</h3>
+        <div class="blocks-list">
+          <div class="block-card">
+            <div class="block-number">1</div>
+            <div class="block-info">
+              <span class="block-name">Valores e Integridad</span>
+              <span class="block-meta">15 preguntas · ~8 minutos</span>
+            </div>
+          </div>
+          <div class="block-card">
+            <div class="block-number">2</div>
+            <div class="block-info">
+              <span class="block-name">Estilo de Trabajo</span>
+              <span class="block-meta">24 preguntas · ~9 minutos</span>
+            </div>
+          </div>
+          <div class="block-card" id="block-personalidad">
+            <div class="block-number">3</div>
+            <div class="block-info">
+              <span class="block-name">Personalidad</span>
+              <span class="block-meta">60 preguntas · ~15 minutos</span>
+            </div>
+          </div>
+        </div>
+        <div class="instr-eval-footer">
+          <p id="instr-tiempo" class="instr-tiempo"></p>
+          <div id="instr-progress" class="instr-progress"></div>
+        </div>
+      </div>
+
+      <!-- S3: Indicaciones -->
+      <div class="instr-section">
+        <h3 class="instr-section-label">Indicaciones</h3>
+        <ul class="instr-list">
+          <li>Mantén tu celular guardado durante toda la sesión</li>
+          <li>Permanece en esta pantalla hasta completar las pruebas</li>
+          <li>Responde por tu cuenta, sin consultar a nadie</li>
+          <li>Si el tiempo de una pregunta se agota, el sistema avanza automáticamente</li>
+        </ul>
+      </div>
+
+      <!-- S4: Checkbox + Botón -->
+      <div class="instr-section instr-footer-section">
+        <label class="instr-check-wrapper">
+          <input type="checkbox" id="checkbox-acepto" />
+          <span class="instr-check-label">Para continuar, confirma que has leído y aceptas las indicaciones anteriores.</span>
+        </label>
+        <button id="btn-comenzar" class="btn-gold" disabled>Comenzar</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PANTALLA 3 — BLOQUE 1: ZAVIC
+  ═══════════════════════════════════════ -->
+  <section id="screen-pruebas" class="screen">
+
+    <!-- ─ Introducción al bloque (visible al entrar) ──────── -->
+    <div id="zavic-intro" class="zavic-intro">
+      <div class="zavic-intro-inner">
+
+        <div class="zavic-intro-top">
+          <span class="bloque-tag">Bloque 1 de 2</span>
+          <h2 class="bloque-titulo">Valores e Integridad</h2>
+          <p class="bloque-meta">15 preguntas · ~8 minutos</p>
+        </div>
+
+        <p class="bloque-instruccion">
+          Lee cada situación y selecciona qué harías <strong>MÁS</strong> y qué harías <strong>MENOS</strong> entre las opciones presentadas.
+        </p>
+
+        <!-- Pregunta de práctica -->
+        <div class="practica-card">
+          <p class="practica-etiqueta">Ejemplo — así funciona cada pregunta</p>
+          <p class="practica-texto">Llegas al trabajo y encuentras una carpeta con documentos en el pasillo. ¿Qué harías?</p>
+
+          <div id="practica-opciones" class="opciones-grid">
+            <div class="opcion-card" data-letra="A">
+              <span class="opcion-letra">A</span>
+              <span class="opcion-texto">La entrego en recepción de inmediato</span>
+            </div>
+            <div class="opcion-card" data-letra="B">
+              <span class="opcion-letra">B</span>
+              <span class="opcion-texto">La llevo directamente con mi supervisor</span>
+            </div>
+            <div class="opcion-card" data-letra="C">
+              <span class="opcion-letra">C</span>
+              <span class="opcion-texto">La dejo donde está — no quiero meterme</span>
+            </div>
+            <div class="opcion-card" data-letra="D">
+              <span class="opcion-letra">D</span>
+              <span class="opcion-texto">Pregunto a los compañeros si alguien la perdió</span>
+            </div>
+          </div>
+
+          <div class="selectores">
+            <div class="selector-row">
+              <span class="selector-label">¿Cuál harías <strong>MÁS</strong>?</span>
+              <div id="practica-mas" class="selector-pills">
+                <button class="selector-pill" data-letra="A">A</button>
+                <button class="selector-pill" data-letra="B">B</button>
+                <button class="selector-pill" data-letra="C">C</button>
+                <button class="selector-pill" data-letra="D">D</button>
+              </div>
+            </div>
+            <div class="selector-row selector-row-sep">
+              <span class="selector-label">¿Cuál harías <strong>MENOS</strong>?</span>
+              <div id="practica-menos" class="selector-pills">
+                <button class="selector-pill" data-letra="A">A</button>
+                <button class="selector-pill" data-letra="B">B</button>
+                <button class="selector-pill" data-letra="C">C</button>
+                <button class="selector-pill" data-letra="D">D</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button id="btn-comenzar-bloque" class="btn-gold">Comenzar bloque</button>
+
+      </div>
+    </div>
+
+    <!-- ─ Header (oculto hasta que inician las preguntas) ─── -->
+    <header id="zavic-header" class="pruebas-header" hidden>
+      <div class="pruebas-hrow">
+        <span class="pruebas-bloque-label">Bloque 1 — Valores e Integridad</span>
+        <span id="pruebas-counter" class="pruebas-counter">00:00</span>
+      </div>
+      <div class="pruebas-hrow">
+        <span id="pruebas-progreso-texto" class="pruebas-progreso-texto">Pregunta 1 de 15</span>
+      </div>
+      <div class="pruebas-progress-track">
+        <div id="pruebas-progress-fill" class="pruebas-progress-fill"></div>
+      </div>
+    </header>
+
+    <!-- ─ Área de preguntas (oculta hasta que inician) ─────── -->
+    <div id="zavic-body" class="pruebas-content" hidden>
+      <div class="pruebas-inner">
+
+        <div class="pruebas-situacion">
+          <p id="pruebas-situacion-num" class="pruebas-situacion-num"></p>
+          <p id="pruebas-situacion-texto" class="pruebas-situacion-texto"></p>
+        </div>
+
+        <div id="opciones-grid" class="opciones-grid"></div>
+
+        <div class="selectores">
+          <div class="selector-row">
+            <span class="selector-label">¿Cuál harías <strong>MÁS</strong>?</span>
+            <div id="mas-pills" class="selector-pills"></div>
+          </div>
+          <div class="selector-row selector-row-sep">
+            <span class="selector-label">¿Cuál harías <strong>MENOS</strong>?</span>
+            <div id="menos-pills" class="selector-pills"></div>
+          </div>
+        </div>
+
+        <button id="btn-siguiente" class="btn-gold" disabled>Siguiente</button>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PANTALLA 4 — BLOQUE 2: DISC
+  ═══════════════════════════════════════ -->
+  <section id="screen-disc" class="screen">
+
+    <!-- ─ Introducción al bloque ──────────────────────────── -->
+    <div id="disc-intro" class="disc-intro">
+      <div class="disc-intro-inner">
+
+        <div class="zavic-intro-top">
+          <span class="bloque-tag">Bloque 2 de 2</span>
+          <h2 class="bloque-titulo">Estilo de Trabajo</h2>
+          <p class="bloque-meta">24 grupos · ~9 minutos</p>
+        </div>
+
+        <p class="bloque-instruccion">
+          En cada grupo verás 4 frases. Primero elige cuál te describe <strong>MÁS</strong> y luego cuál te describe <strong>MENOS</strong>.
+        </p>
+
+        <!-- Grupo de práctica -->
+        <div class="practica-card">
+          <p class="practica-etiqueta">Ejemplo — así funciona cada grupo</p>
+          <p class="practica-texto">¿Cuál de estas frases te describe más como eres tú en el trabajo?</p>
+
+          <div id="practica-disc-opciones" class="opciones-grid">
+            <div class="opcion-card" data-letra="A">
+              <span class="opcion-letra">A</span>
+              <span class="opcion-texto">Me gusta arrancar las cosas</span>
+            </div>
+            <div class="opcion-card" data-letra="B">
+              <span class="opcion-letra">B</span>
+              <span class="opcion-texto">Disfruto trabajar con gente</span>
+            </div>
+            <div class="opcion-card" data-letra="C">
+              <span class="opcion-letra">C</span>
+              <span class="opcion-texto">Prefiero un ritmo constante</span>
+            </div>
+            <div class="opcion-card" data-letra="D">
+              <span class="opcion-letra">D</span>
+              <span class="opcion-texto">Me fijo mucho en los detalles</span>
+            </div>
+          </div>
+
+          <div class="selectores">
+            <div class="selector-row">
+              <span class="selector-label">¿Cuál te describe <strong>MÁS</strong>?</span>
+              <div id="practica-disc-mas" class="selector-pills">
+                <button class="selector-pill" data-letra="A">A</button>
+                <button class="selector-pill" data-letra="B">B</button>
+                <button class="selector-pill" data-letra="C">C</button>
+                <button class="selector-pill" data-letra="D">D</button>
+              </div>
+            </div>
+            <div class="selector-row selector-row-sep">
+              <span class="selector-label">¿Cuál te describe <strong>MENOS</strong>?</span>
+              <div id="practica-disc-menos" class="selector-pills">
+                <button class="selector-pill" data-letra="A">A</button>
+                <button class="selector-pill" data-letra="B">B</button>
+                <button class="selector-pill" data-letra="C">C</button>
+                <button class="selector-pill" data-letra="D">D</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button id="btn-comenzar-disc" class="btn-gold">Comenzar bloque</button>
+
+      </div>
+    </div>
+
+    <!-- ─ Header ──────────────────────────────────────────── -->
+    <header id="disc-header" class="pruebas-header" hidden>
+      <div class="pruebas-hrow">
+        <span class="pruebas-bloque-label">Bloque 2 — Estilo de Trabajo</span>
+        <span id="disc-counter" class="pruebas-counter">00:00</span>
+      </div>
+      <div class="pruebas-hrow">
+        <span id="disc-progreso-texto" class="pruebas-progreso-texto">Grupo 1 de 24</span>
+      </div>
+      <div class="pruebas-progress-track">
+        <div id="disc-progress-fill" class="pruebas-progress-fill"></div>
+      </div>
+    </header>
+
+    <!-- ─ Área de grupos ──────────────────────────────────── -->
+    <div id="disc-body" class="pruebas-content" hidden>
+      <div class="pruebas-inner">
+
+        <div class="pruebas-situacion">
+          <p id="disc-grupo-num" class="pruebas-situacion-num"></p>
+          <p class="pruebas-situacion-texto">
+            ¿Cuál de estas frases te describe <strong>MÁS</strong>? ¿Y cuál te describe <strong>MENOS</strong>?
+          </p>
+        </div>
+
+        <div id="disc-opciones-grid" class="opciones-grid"></div>
+
+        <div class="selectores">
+          <div class="selector-row">
+            <span class="selector-label">¿Cuál te describe <strong>MÁS</strong>?</span>
+            <div id="disc-mas-pills" class="selector-pills"></div>
+          </div>
+          <div class="selector-row selector-row-sep">
+            <span class="selector-label">¿Cuál te describe <strong>MENOS</strong>?</span>
+            <div id="disc-menos-pills" class="selector-pills"></div>
+          </div>
+        </div>
+
+        <button id="disc-btn-siguiente" class="btn-gold" disabled>Siguiente</button>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PANTALLA — PROCESANDO (spinner de envío)
+  ═══════════════════════════════════════ -->
+  <section id="screen-procesando" class="screen">
+    <div class="procesando-container">
+      <div class="procesando-spinner"></div>
+      <p class="procesando-texto">Procesando tu evaluación…</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PANTALLA 3B — TRANSICIÓN ENTRE BLOQUES
+  ═══════════════════════════════════════ -->
+  <section id="screen-transicion" class="screen">
+    <div class="transicion-container">
+
+      <div class="transicion-icono">✓</div>
+
+      <div>
+        <p class="transicion-subtitulo">Bloque 1 completado</p>
+        <h2 class="transicion-titulo">¡Muy bien!</h2>
+      </div>
+
+      <div class="transicion-progreso">
+        <p class="transicion-progreso-label">Progreso general</p>
+        <div class="transicion-progreso-track">
+          <div class="transicion-progreso-fill"></div>
+        </div>
+      </div>
+
+      <div class="transicion-aviso">
+        <p class="transicion-aviso-titulo">Antes de continuar</p>
+        <p class="transicion-aviso-texto">Puedes tomar un descanso breve — ir al baño, tomar agua.</p>
+        <p class="transicion-aviso-duracion">El Bloque 2 dura aproximadamente 9 minutos.</p>
+      </div>
+
+      <button id="btn-continuar-bloque2" class="btn-gold">Continuar con Bloque 2</button>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PANTALLA 3C — TRANSICIÓN HACIA BLOQUE 3
+       (solo visible para nivel gerencial)
+  ═══════════════════════════════════════ -->
+  <section id="screen-transicion-b3" class="screen">
+    <div class="transicion-container">
+
+      <div class="transicion-icono">✓</div>
+
+      <div>
+        <p class="transicion-subtitulo">Bloque 2 completado</p>
+        <h2 class="transicion-titulo">¡Excelente!</h2>
+      </div>
+
+      <div class="transicion-progreso">
+        <p class="transicion-progreso-label">Progreso general</p>
+        <div class="transicion-progreso-track">
+          <div class="transicion-progreso-fill" style="width: 67%"></div>
+        </div>
+      </div>
+
+      <div class="transicion-aviso">
+        <p class="transicion-aviso-titulo">Antes de continuar</p>
+        <p class="transicion-aviso-texto">Puedes tomar un descanso breve — ir al baño, tomar agua.</p>
+        <p class="transicion-aviso-duracion">El Bloque 3 dura aproximadamente 15 minutos.</p>
+      </div>
+
+      <button id="btn-continuar-bloque3" class="btn-gold">Continuar con Bloque 3</button>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PANTALLA 4 — CIERRE CANDIDATO
+  ═══════════════════════════════════════ -->
+  <section id="screen-cierre-candidato" class="screen">
+
+    <!-- Mensaje principal al candidato -->
+    <div class="cierre-candidato-main">
+      <div class="cierre-icono">✓</div>
+      <h2 class="cierre-titulo">Gracias, <span id="cierre-nombre"></span>.</h2>
+      <p class="cierre-texto">Has completado tu evaluación. Tus respuestas han sido registradas.</p>
+      <div class="cierre-instruccion-box">
+        <p class="cierre-instruccion">Por favor entrega la tablet al gerente de la sucursal.</p>
+      </div>
+    </div>
+
+    <!-- Acceso discreto para el gerente — no obvio para el candidato -->
+    <div class="gerente-acceso">
+      <button id="btn-acceso-gerente" class="gerente-acceso-btn">Acceso gerente</button>
+      <div id="gerente-pin-panel" class="gerente-pin-panel" hidden>
+        <input
+          id="gerente-pin-input"
+          class="gerente-pin-input"
+          type="password"
+          inputmode="numeric"
+          maxlength="4"
+          placeholder="· · · ·"
+          autocomplete="off"
+        />
+        <button id="btn-validar-pin" class="btn-gold gerente-pin-validar" disabled>Validar</button>
+        <p id="gerente-pin-feedback" class="gerente-pin-feedback"></p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PANTALLA 5 — CIERRE GERENTE (PIN)
+  ═══════════════════════════════════════ -->
+  <section id="screen-cierre-gerente" class="screen">
+    <div id="gerente-resultado" class="gerente-resultado">
+      <div id="gerente-resultado-icono" class="gerente-resultado-icono"></div>
+      <p id="gerente-resultado-veredicto" class="gerente-resultado-veredicto"></p>
+      <p id="gerente-resultado-nombre" class="gerente-resultado-nombre"></p>
+      <button id="btn-nueva-evaluacion" class="btn-nueva-evaluacion">Nueva evaluación</button>
+    </div>
+  </section>
+
+  <script src="js/app.js"></script>
+  <script src="js/zavic-data.js"></script>
+  <script src="js/zavic.js"></script>
+  <script src="js/disc-data.js"></script>
+  <script src="js/disc.js"></script>
+  <script src="js/backend.js"></script>
+</body>
+</html>

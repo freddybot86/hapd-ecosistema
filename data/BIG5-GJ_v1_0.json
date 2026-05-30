@@ -1,0 +1,326 @@
+{
+  "instrumento": {
+    "id": "BIG5-GJ",
+    "version": "1.0",
+    "nombre": "Big Five GastroJobs — Personalidad Gerencial",
+    "nombre_corto": "BIG5-GJ",
+    "descripcion": "Instrumento propietario de GastroJobs para evaluación de personalidad en candidatos a puestos gerenciales en el sector restaurantero. Basado en el modelo de los Cinco Grandes (Big Five / BFQ), adaptado al contexto operativo de restaurantes mexicanos.",
+    "aplicacion": "Solo puestos gerenciales: Gerente General, Chef Ejecutivo, Sous Chef, Gerente de Servicio",
+    "empresa": "The Hap&D Co. — GastroJobs",
+    "confidencial": true,
+    "total_items": 60,
+    "escala": {
+      "tipo": "Likert",
+      "min": 1,
+      "max": 5,
+      "etiquetas": {
+        "1": "Muy en desacuerdo",
+        "2": "En desacuerdo",
+        "3": "Ni de acuerdo ni en desacuerdo",
+        "4": "De acuerdo",
+        "5": "Muy de acuerdo"
+      }
+    },
+    "dimensiones": {
+      "R": { "nombre": "Responsabilidad", "items_count": 10 },
+      "E": { "nombre": "Estabilidad Emocional", "items_count": 10 },
+      "X": { "nombre": "Extraversión", "items_count": 10 },
+      "A": { "nombre": "Amabilidad", "items_count": 10 },
+      "O": { "nombre": "Apertura", "items_count": 10 },
+      "L": { "nombre": "Escala L — Deseabilidad Social", "items_count": 10 }
+    }
+  },
+
+  "items": [
+
+    {
+      "num": 1, "dimension": "R", "inverso": false,
+      "texto": "Cuando me asignan una tarea, la termino aunque tenga que quedarme más tiempo del acordado."
+    },
+    {
+      "num": 2, "dimension": "E", "inverso": true,
+      "texto": "Cuando el restaurante está a full y todo se atrasa, me desespero y me cuesta mantener la calma."
+    },
+    {
+      "num": 3, "dimension": "X", "inverso": false,
+      "texto": "Me gusta arrancar conversación con gente nueva, ya sea con el equipo o con los clientes."
+    },
+    {
+      "num": 4, "dimension": "A", "inverso": false,
+      "texto": "Si alguien de mi equipo está batallando con su trabajo, le echo la mano aunque no sea mi responsabilidad."
+    },
+    {
+      "num": 5, "dimension": "O", "inverso": false,
+      "texto": "Cuando llega un cambio en el menú o en los procesos, lo veo como una oportunidad de aprender algo nuevo."
+    },
+    {
+      "num": 6, "dimension": "L", "inverso": false,
+      "texto": "Siempre llego puntual a todos mis compromisos, sin excepción."
+    },
+    {
+      "num": 7, "dimension": "R", "inverso": true,
+      "texto": "A veces dejo pendientes del turno anterior porque sé que alguien más los puede resolver."
+    },
+    {
+      "num": 8, "dimension": "E", "inverso": false,
+      "texto": "Cuando un cliente se pone difícil o agresivo, logro mantenerme calmado y manejar la situación sin perder los estribos."
+    },
+    {
+      "num": 9, "dimension": "X", "inverso": true,
+      "texto": "Prefiero trabajar de manera independiente que estar todo el tiempo interactuando con el equipo o los clientes."
+    },
+    {
+      "num": 10, "dimension": "A", "inverso": true,
+      "texto": "Cuando no estoy de acuerdo con alguien, prefiero no decir nada para evitar problemas."
+    },
+    {
+      "num": 11, "dimension": "O", "inverso": true,
+      "texto": "Si algo ha funcionado bien por años, no veo por qué cambiarlo aunque llegue alguien con ideas nuevas."
+    },
+    {
+      "num": 12, "dimension": "L", "inverso": false,
+      "texto": "Nunca he dicho una mentira para salir de un problema en el trabajo."
+    },
+    {
+      "num": 13, "dimension": "R", "inverso": false,
+      "texto": "Cuando me comprometo a entregar algo en una fecha, lo hago aunque tenga que reorganizar todo mi día."
+    },
+    {
+      "num": 14, "dimension": "E", "inverso": false,
+      "texto": "Puedo trabajar bajo presión durante varios días seguidos sin que mi desempeño se caiga."
+    },
+    {
+      "num": 15, "dimension": "X", "inverso": false,
+      "texto": "Me energiza liderar al equipo durante un turno complicado — ese tipo de retos me prenden."
+    },
+    {
+      "num": 16, "dimension": "A", "inverso": false,
+      "texto": "Cuando doy retroalimentación a mi equipo, busco que la persona se vaya motivada, no aplastada."
+    },
+    {
+      "num": 17, "dimension": "O", "inverso": false,
+      "texto": "Me interesa entender por qué las cosas funcionan como funcionan, no solo hacer lo que me dicen."
+    },
+    {
+      "num": 18, "dimension": "L", "inverso": false,
+      "texto": "Nunca he llegado tarde al trabajo sin haber avisado antes."
+    },
+    {
+      "num": 19, "dimension": "R", "inverso": true,
+      "texto": "Hay días en que me cuesta trabajo arrancar y termino dejando cosas para el siguiente turno."
+    },
+    {
+      "num": 20, "dimension": "E", "inverso": true,
+      "texto": "Cuando siento que el trabajo se me acumula, me bloqueo y me cuesta saber por dónde empezar."
+    },
+    {
+      "num": 21, "dimension": "X", "inverso": false,
+      "texto": "Cuando hay tensión en el equipo, suelo ser de los primeros en abrir el tema y buscar que se resuelva."
+    },
+    {
+      "num": 22, "dimension": "A", "inverso": true,
+      "texto": "Si alguien no hace bien su chamba, prefiero reportarlo directamente en lugar de hablar primero con él."
+    },
+    {
+      "num": 23, "dimension": "O", "inverso": false,
+      "texto": "Me gusta probar formas distintas de hacer las cosas, aunque la manera tradicional también funcione."
+    },
+    {
+      "num": 24, "dimension": "L", "inverso": false,
+      "texto": "Siempre trato a todas las personas con el mismo respeto, sin importar su puesto o nivel."
+    },
+    {
+      "num": 25, "dimension": "R", "inverso": false,
+      "texto": "Reviso mi checklist de cierre antes de salir del turno, aunque ya esté cansado."
+    },
+    {
+      "num": 26, "dimension": "E", "inverso": false,
+      "texto": "Después de un turno muy pesado, logro desconectarme y llegar al siguiente turno con la pila cargada."
+    },
+    {
+      "num": 27, "dimension": "X", "inverso": true,
+      "texto": "En reuniones de equipo, prefiero escuchar en lugar de tomar la voz y proponer ideas."
+    },
+    {
+      "num": 28, "dimension": "A", "inverso": false,
+      "texto": "Cuando un compañero atraviesa un momento difícil, hago lo posible por apoyarlo aunque no me lo pida."
+    },
+    {
+      "num": 29, "dimension": "O", "inverso": true,
+      "texto": "Las capacitaciones nuevas me parecen una pérdida de tiempo cuando ya sé hacer mi trabajo."
+    },
+    {
+      "num": 30, "dimension": "L", "inverso": false,
+      "texto": "Nunca he tomado algo del restaurante, aunque fuera algo pequeño, sin autorización."
+    },
+    {
+      "num": 31, "dimension": "R", "inverso": false,
+      "texto": "Cuando recibo instrucciones del corporativo, las sigo al pie de la letra aunque no comparta la decisión."
+    },
+    {
+      "num": 32, "dimension": "E", "inverso": true,
+      "texto": "Si tengo un conflicto fuerte con un colaborador, me cuesta dejarlo atrás y suele afectar cómo trato al equipo el resto del turno."
+    },
+    {
+      "num": 33, "dimension": "X", "inverso": false,
+      "texto": "Me resulta fácil hablar frente a un grupo, ya sea para capacitar o para dar indicaciones al equipo."
+    },
+    {
+      "num": 34, "dimension": "A", "inverso": false,
+      "texto": "Reconozco en público cuando alguien de mi equipo hace bien su trabajo."
+    },
+    {
+      "num": 35, "dimension": "O", "inverso": false,
+      "texto": "Cuando visito otros restaurantes, siempre regreso con ideas de cosas que podríamos mejorar en el nuestro."
+    },
+    {
+      "num": 36, "dimension": "L", "inverso": false,
+      "texto": "Siempre he cumplido todas las instrucciones de seguridad e higiene sin saltarme ningún paso."
+    },
+    {
+      "num": 37, "dimension": "R", "inverso": true,
+      "texto": "Reconozco que a veces me cuesta seguir los procedimientos al pie de la letra cuando hay mucha prisa."
+    },
+    {
+      "num": 38, "dimension": "E", "inverso": false,
+      "texto": "Cuando hay un problema grave en el turno, puedo pensar con claridad y tomar decisiones sin que el nervio me domine."
+    },
+    {
+      "num": 39, "dimension": "X", "inverso": false,
+      "texto": "Disfruto representar al restaurante frente a proveedores, clientes VIP o visitantes del corporativo."
+    },
+    {
+      "num": 40, "dimension": "A", "inverso": true,
+      "texto": "Hay personas con las que simplemente no me llevo y prefiero mantener la distancia en el trabajo."
+    },
+    {
+      "num": 41, "dimension": "O", "inverso": false,
+      "texto": "Me atrae la idea de aprender algo fuera de mi área — cocina, administración, servicio — aunque no sea mi especialidad."
+    },
+    {
+      "num": 42, "dimension": "L", "inverso": false,
+      "texto": "Nunca he hablado mal de un compañero o jefe a sus espaldas."
+    },
+    {
+      "num": 43, "dimension": "R", "inverso": false,
+      "texto": "Cuando cometo un error, lo reconozco de frente y propongo cómo corregirlo, sin esperar a que me lo señalen."
+    },
+    {
+      "num": 44, "dimension": "E", "inverso": true,
+      "texto": "Cuando recibo una crítica de mi jefe delante del equipo, me cuesta no reaccionar en el momento."
+    },
+    {
+      "num": 45, "dimension": "X", "inverso": true,
+      "texto": "Prefiero que sean otros quienes tomen la iniciativa cuando hay que mover al equipo en una situación difícil."
+    },
+    {
+      "num": 46, "dimension": "A", "inverso": false,
+      "texto": "Cuando hay un conflicto entre dos compañeros, busco mediar y llegar a una solución que funcione para los dos."
+    },
+    {
+      "num": 47, "dimension": "O", "inverso": false,
+      "texto": "Si el restaurante cambia de concepto o de marca, me adapto sin problema y le entro con buena actitud."
+    },
+    {
+      "num": 48, "dimension": "L", "inverso": false,
+      "texto": "Nunca me he aprovechado de mi posición para obtener algún beneficio que no me correspondía."
+    },
+    {
+      "num": 49, "dimension": "R", "inverso": false,
+      "texto": "Mantengo mi área de trabajo ordenada y en condiciones, aunque el turno esté muy cargado."
+    },
+    {
+      "num": 50, "dimension": "E", "inverso": false,
+      "texto": "Cuando hay problemas externos — tráfico, mal tiempo, proveedores tardados — no dejo que me afecten el ánimo en el turno."
+    },
+    {
+      "num": 51, "dimension": "X", "inverso": false,
+      "texto": "Construyo fácilmente relaciones de confianza con gente nueva, ya sea del equipo o de otras áreas."
+    },
+    {
+      "num": 52, "dimension": "A", "inverso": true,
+      "texto": "A veces me cuesta aceptar errores ajenos sin dejar que eso afecte cómo trato a esa persona el resto del turno."
+    },
+    {
+      "num": 53, "dimension": "O", "inverso": true,
+      "texto": "Prefiero que el corporativo me diga exactamente qué hacer en lugar de tener que proponer o improvisar."
+    },
+    {
+      "num": 54, "dimension": "L", "inverso": false,
+      "texto": "Siempre cumplo mis compromisos laborales, incluso cuando hacerlo implica un esfuerzo extra de mi parte."
+    },
+    {
+      "num": 55, "dimension": "R", "inverso": true,
+      "texto": "Hay veces que meto información incompleta en los reportes porque ya es tarde y quiero terminar el turno."
+    },
+    {
+      "num": 56, "dimension": "E", "inverso": true,
+      "texto": "Cuando el equipo está desmotivado, ese ambiente me contagia y me afecta mi propio desempeño."
+    },
+    {
+      "num": 57, "dimension": "X", "inverso": false,
+      "texto": "Cuando hay que dar malas noticias al equipo, lo hago directo y de frente, sin delegarlo a alguien más."
+    },
+    {
+      "num": 58, "dimension": "A", "inverso": false,
+      "texto": "Escucho a mi equipo antes de tomar una decisión que los afecta, aunque al final la decisión sea mía."
+    },
+    {
+      "num": 59, "dimension": "O", "inverso": false,
+      "texto": "Me interesa saber cómo funcionan otras áreas del negocio — costos, proveedores, marketing — aunque no sea mi área."
+    },
+    {
+      "num": 60, "dimension": "L", "inverso": false,
+      "texto": "Siempre actúo de la misma manera, ya sea que me estén observando o no."
+    }
+  ],
+
+  "clave_calificacion": {
+    "descripcion": "Para ítems DIRECTOS (inverso: false): el puntaje es el valor marcado (1-5). Para ítems INVERSOS (inverso: true): el puntaje se invierte — 1→5, 2→4, 3→3, 4→2, 5→1. Sumar los 10 ítems de cada dimensión. Rango bruto por dimensión: 10-50. Convertir a escala 0-100 multiplicando por 2.",
+    "formula_inversion": "puntaje_invertido = 6 - valor_marcado",
+    "formula_escala_100": "puntaje_final = suma_bruta * 2",
+    "items_directos": [1,3,4,5,6,8,12,13,14,15,16,17,18,21,23,24,25,26,28,30,31,33,34,35,36,38,39,41,43,46,47,48,49,50,51,54,57,58,59,60],
+    "items_inversos": [2,7,9,10,11,19,20,22,27,29,32,37,40,42,44,45,52,53,55,56],
+    "items_por_dimension": {
+      "R": { "nums": [1,7,13,19,25,31,37,43,49,55], "inversos_en_dimension": [7,19,37,55] },
+      "E": { "nums": [2,8,14,20,26,32,38,44,50,56], "inversos_en_dimension": [2,20,32,44,56] },
+      "X": { "nums": [3,9,15,21,27,33,39,45,51,57], "inversos_en_dimension": [9,27,45] },
+      "A": { "nums": [4,10,16,22,28,34,40,46,52,58], "inversos_en_dimension": [10,22,40,52] },
+      "O": { "nums": [5,11,17,23,29,35,41,47,53,59], "inversos_en_dimension": [11,29,53] },
+      "L": { "nums": [6,12,18,24,30,36,42,48,54,60], "inversos_en_dimension": [] }
+    },
+    "criterios_de_corte": {
+      "nota": "Puntaje en escala 0-100. Criterios alineados con psicometrico/SKILL.md",
+      "R":  { "PASA": ">=65",  "ALERTA": "40-64", "DESCARTE": "<40" },
+      "E":  { "PASA": ">=60",  "ALERTA": "40-59", "DESCARTE": "<40" },
+      "X":  { "PASA": ">=50",  "ALERTA": "30-49", "DESCARTE": "<30 (solo F2C)" },
+      "A":  { "PASA": ">=55",  "ALERTA": "35-54", "DESCARTE": "<35" },
+      "O":  { "PASA": ">=45",  "ALERTA": "30-44", "DESCARTE": "<30" },
+      "L":  {
+        "NORMAL": "<70",
+        "ALERTA": "70-84",
+        "MUY_ELEVADA": ">=85",
+        "interpretacion": "Escala L muy elevada invalida el perfil — respondió lo que cree que se espera, no lo que piensa. Señalar explícitamente al entrevistador."
+      }
+    }
+  },
+
+  "apps_script": {
+    "descripcion": "Función de calificación para Google Apps Script. Recibe un array de 60 respuestas (valores 1-5) y regresa un objeto con puntajes por dimensión en escala 0-100.",
+    "codigo": "/**\n * BIG5-GJ v1.0 — Clave de calificación\n * GastroJobs / The Hap&D Co.\n * \n * @param {number[]} respuestas Array de 60 valores (1-5), en orden del ítem 1 al 60.\n * @returns {Object} Puntajes por dimensión en escala 0-100 + veredicto por corte.\n */\nfunction calificarBIG5GJ(respuestas) {\n\n  if (!respuestas || respuestas.length !== 60) {\n    throw new Error('Se requieren exactamente 60 respuestas.');\n  }\n\n  // Items inversos (base-1, posición real en array = num-1)\n  const INVERSOS = [2,7,9,10,11,19,20,22,27,29,32,37,40,42,44,45,52,53,55,56];\n\n  // Items por dimensión (base-1)\n  const DIMENSIONES = {\n    R: [1,7,13,19,25,31,37,43,49,55],\n    E: [2,8,14,20,26,32,38,44,50,56],\n    X: [3,9,15,21,27,33,39,45,51,57],\n    A: [4,10,16,22,28,34,40,46,52,58],\n    O: [5,11,17,23,29,35,41,47,53,59],\n    L: [6,12,18,24,30,36,42,48,54,60]\n  };\n\n  // Criterios de corte\n  const CORTES = {\n    R: { PASA: 65, ALERTA: 40 },\n    E: { PASA: 60, ALERTA: 40 },\n    X: { PASA: 50, ALERTA: 30 },\n    A: { PASA: 55, ALERTA: 35 },\n    O: { PASA: 45, ALERTA: 30 },\n    L: { ALERTA: 70, MUY_ELEVADA: 85 }\n  };\n\n  // 1. Aplicar inversión\n  const puntajes = respuestas.map((val, idx) => {\n    const numItem = idx + 1;\n    return INVERSOS.includes(numItem) ? (6 - val) : val;\n  });\n\n  // 2. Calcular suma bruta y convertir a escala 0-100\n  const resultados = {};\n  for (const [dim, items] of Object.entries(DIMENSIONES)) {\n    const sumaBruta = items.reduce((acc, num) => acc + puntajes[num - 1], 0);\n    const puntaje100 = sumaBruta * 2; // rango 10-50 → 20-100\n    resultados[dim] = { bruto: sumaBruta, puntaje: puntaje100 };\n  }\n\n  // 3. Aplicar criterios de corte por dimensión\n  const veredictos = {};\n  for (const dim of ['R','E','X','A','O']) {\n    const p = resultados[dim].puntaje;\n    const c = CORTES[dim];\n    if (p >= c.PASA) veredictos[dim] = 'PASA';\n    else if (p >= c.ALERTA) veredictos[dim] = 'ALERTA';\n    else veredictos[dim] = 'DESCARTE';\n  }\n\n  // 4. Evaluar Escala L\n  const pL = resultados['L'].puntaje;\n  if (pL >= CORTES.L.MUY_ELEVADA) {\n    veredictos['L'] = 'MUY_ELEVADA — Perfil poco confiable';\n  } else if (pL >= CORTES.L.ALERTA) {\n    veredictos['L'] = 'ALERTA — Profundizar en entrevista';\n  } else {\n    veredictos['L'] = 'NORMAL';\n  }\n\n  // 5. Veredicto global\n  const hayDescarte = ['R','E','X','A','O'].some(d => veredictos[d] === 'DESCARTE');\n  const hayAlerta   = ['R','E','X','A','O'].some(d => veredictos[d] === 'ALERTA');\n  const perfilConfiable = pL < CORTES.L.MUY_ELEVADA;\n\n  let veredictoGlobal;\n  if (!perfilConfiable) {\n    veredictoGlobal = 'PERFIL NO CONFIABLE — Escala L muy elevada';\n  } else if (hayDescarte) {\n    veredictoGlobal = 'NO PASA';\n  } else if (hayAlerta) {\n    veredictoGlobal = 'PASA CON ALERTAS';\n  } else {\n    veredictoGlobal = 'PASA';\n  }\n\n  return {\n    instrumento: 'BIG5-GJ v1.0',\n    puntajes: {\n      R: resultados.R.puntaje,\n      E: resultados.E.puntaje,\n      X: resultados.X.puntaje,\n      A: resultados.A.puntaje,\n      O: resultados.O.puntaje,\n      L: resultados.L.puntaje\n    },\n    veredictos: veredictos,\n    veredicto_global: veredictoGlobal\n  };\n}\n\n/**\n * Ejemplo de uso desde hoja de cálculo:\n * =calificarBIG5GJDesdeRango(B2:BI2)\n */\nfunction calificarBIG5GJDesdeRango(rangoRespuestas) {\n  const respuestas = Array.isArray(rangoRespuestas[0])\n    ? rangoRespuestas[0]\n    : rangoRespuestas;\n  const resultado = calificarBIG5GJ(respuestas.map(Number));\n  // Para usar en celda — regresa string formateado\n  return JSON.stringify(resultado, null, 2);\n}"
+  },
+
+  "instrucciones_administracion": {
+    "titulo_para_candidato": "Cuestionario de Situaciones Laborales",
+    "instrucciones_para_candidato": "A continuación encontrarás una serie de afirmaciones sobre situaciones de trabajo. Lee cada una con calma y selecciona qué tan de acuerdo estás con ella, usando la siguiente escala:\n\n1 = Muy en desacuerdo\n2 = En desacuerdo\n3 = Ni de acuerdo ni en desacuerdo\n4 = De acuerdo\n5 = Muy de acuerdo\n\nNo hay respuestas correctas o incorrectas. Responde con honestidad — lo que describas tiene que ver con cómo te comportas realmente en el trabajo, no con cómo crees que deberías comportarte.",
+    "tiempo_estimado_minutos": 15,
+    "aplicacion_recomendada": "Individual. Sin tiempo límite. En ambiente tranquilo.",
+    "orden_presentacion": "Los ítems se presentan mezclados para que el candidato no identifique las dimensiones. El orden del JSON (1 al 60) ya está diseñado para esto.",
+    "notas_operativas": [
+      "No revelar el nombre de las dimensiones al candidato.",
+      "No presentar ítems agrupados por dimensión — el orden del JSON es el orden correcto.",
+      "La Escala L (ítems 6,12,18,24,30,36,42,48,54,60) detecta deseabilidad social — el candidato no debe saber que existe.",
+      "Si el candidato pregunta qué mide la prueba, responder: 'Situaciones y actitudes relacionadas con el trabajo en restaurantes.'"
+    ]
+  }
+}

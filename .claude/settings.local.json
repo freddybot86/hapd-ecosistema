@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Command git -ErrorAction SilentlyContinue; \\(Get-Item \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\" -ErrorAction SilentlyContinue\\).FullName; \\(Get-Item \"C:\\\\Program Files \\(x86\\)\\\\Git\\\\cmd\\\\git.exe\" -ErrorAction SilentlyContinue\\).FullName)",
+      "PowerShell(winget list git 2>$null)",
+      "PowerShell(scoop list git 2>$null)"
+    ]
+  }
+}

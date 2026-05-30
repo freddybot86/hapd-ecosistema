@@ -1,0 +1,687 @@
+{
+  "instrumento": "DISC-GJ",
+  "version": "1.0",
+  "fecha_creacion": "2026-05-21",
+  "descripcion": "Instrumento de estilo conductual propio de GastroJobs. Versión adaptada para personal operativo y gerencial de restaurantes mexicanos. Lenguaje coloquial, ranking forzado 4-3-2-1.",
+  "total_grupos": 24,
+  "instrucciones_generales": "Vas a ver grupos de 4 frases. En cada grupo ordénalas de la que MÁS te describe (4 puntos) a la que MENOS te describe (1 punto). No puede haber empate — cada número se usa una sola vez por grupo.",
+  "columnas": [
+    {
+      "id": "I",
+      "etiqueta": "Máscara",
+      "instruccion": "¿Cómo crees que te ven las personas que trabajan contigo?"
+    },
+    {
+      "id": "II",
+      "etiqueta": "Natural",
+      "instruccion": "¿Cuál de estas frases te describe más como eres tú en realidad?"
+    },
+    {
+      "id": "III",
+      "etiqueta": "Bajo presión",
+      "instruccion": "¿Cómo actúas cuando hay mucho trabajo y todo es urgente?"
+    }
+  ],
+  "grupos": [
+    {
+      "id": "G01",
+      "opciones": {
+        "A": {
+          "texto": "Toma el control rápido",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Anima al equipo",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Siempre está cuando se le necesita",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "No deja nada a medias",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G02",
+      "opciones": {
+        "A": {
+          "texto": "Dice lo que piensa sin rodeos",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Cae bien con todos",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Trabaja parejo todos los días",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Revisa todo antes de actuar",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G03",
+      "opciones": {
+        "A": {
+          "texto": "Le gusta dirigir",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Siempre tiene buena actitud",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Paciente con los demás",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Preciso con los detalles",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G04",
+      "opciones": {
+        "A": {
+          "texto": "Resuelve sin que le digan cómo",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Contagia energía al equipo",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Constante y de confianza",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Sigue los pasos exacto",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G05",
+      "opciones": {
+        "A": {
+          "texto": "Decisivo bajo presión",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Muy comunicativo",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Tranquilo aunque haya prisa",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Organizado en todo lo que hace",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G06",
+      "opciones": {
+        "A": {
+          "texto": "No le da miedo asumir riesgos",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Hace amigos fácil",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Leal con su equipo",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Cuida la calidad en todo",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G07",
+      "opciones": {
+        "A": {
+          "texto": "Va directo a lo que importa",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Entusiasta con lo que hace",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Estable en el día a día",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Metódico y ordenado",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G08",
+      "opciones": {
+        "A": {
+          "texto": "Toma decisiones rápido",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Sabe convencer a la gente",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Apoya sin que se lo pidan",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Rara vez se equivoca",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G09",
+      "opciones": {
+        "A": {
+          "texto": "Le gusta competir y ganar",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Se lleva bien con cualquiera",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Aguanta sin quejarse",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Ve lo que otros no ven",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G10",
+      "opciones": {
+        "A": {
+          "texto": "No se rinde ante los problemas",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Le sale natural hablar en grupo",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Nunca falla cuando se compromete",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Analiza antes de opinar",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G11",
+      "opciones": {
+        "A": {
+          "texto": "Empuja para que las cosas pasen",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Siempre tiene algo que contar",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Da la cara cuando se necesita",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Hace las cosas bien de entrada",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G12",
+      "opciones": {
+        "A": {
+          "texto": "Prefiere liderar a seguir",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Positivo aunque las cosas estén difíciles",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Adaptable sin perder la calma",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Necesita entender bien antes de actuar",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G13",
+      "opciones": {
+        "A": {
+          "texto": "Habla claro aunque incomode",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Motiva sin que le pidan hacerlo",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Paciente cuando hay cambios de planes",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "No actúa sin tener claridad",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G14",
+      "opciones": {
+        "A": {
+          "texto": "Orientado a resultados concretos",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Inspira a quienes trabajan con él",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Trabajador aunque nadie lo vea",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Respeta los procedimientos siempre",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G15",
+      "opciones": {
+        "A": {
+          "texto": "Seguro de sí mismo",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Le encanta ayudar a los nuevos",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Confiable en las horas más pesadas",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Sistemático para resolver problemas",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G16",
+      "opciones": {
+        "A": {
+          "texto": "Actúa sin que se lo digan",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Levanta el ánimo cuando hay tensión",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Solidario con el equipo",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Cuidadoso para no cometer errores",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G17",
+      "opciones": {
+        "A": {
+          "texto": "Enfocado en terminar lo que empieza",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Sociable y accesible",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Lento para enojarse",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Exacto con todo lo que entrega",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G18",
+      "opciones": {
+        "A": {
+          "texto": "Le gustan los retos difíciles",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Siempre tiene la palabra correcta",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Firme aunque haya problemas",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Prefiere hacerlo bien a hacerlo rápido",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G19",
+      "opciones": {
+        "A": {
+          "texto": "Exigente consigo mismo y con otros",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Genera buen ambiente donde trabaja",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "No se altera ante lo inesperado",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Documenta y reporta con detalle",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G20",
+      "opciones": {
+        "A": {
+          "texto": "Sabe cuándo hay que apretar",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Facilita que el equipo se entienda",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Absorbe el trabajo extra sin quejarse",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Verifica antes de dar por terminado",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G21",
+      "opciones": {
+        "A": {
+          "texto": "Actúa rápido cuando hay urgencias",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Sabe cómo convencer a la gente",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Tranquilo aunque los demás se estresen",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Aprende los procesos antes de opinar",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G22",
+      "opciones": {
+        "A": {
+          "texto": "Asume la responsabilidad sin titubear",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Disfruta trabajar con gente nueva",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Siempre cumple lo que promete",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Detecta errores antes de que crezcan",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G23",
+      "opciones": {
+        "A": {
+          "texto": "Prefiere actuar a esperar instrucciones",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Muy expresivo cuando habla",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Constante aunque cambie el ambiente",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Minucioso en lo que entrega",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "G24",
+      "opciones": {
+        "A": {
+          "texto": "Directo para dar retroalimentación",
+          "dimension": "D"
+        },
+        "B": {
+          "texto": "Fácil de tratar para todos",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Estable aunque todo se mueva",
+          "dimension": "S"
+        },
+        "D": {
+          "texto": "Riguroso con la calidad siempre",
+          "dimension": "C"
+        }
+      }
+    }
+  ],
+  "clave_calificacion": {
+    "algoritmo": "Apps Script",
+    "logica": "Para cada grupo el candidato asigna 4-3-2-1 a las opciones A/B/C/D. Cada número suma esos puntos a la dimensión (D/I/S/C) de esa opción, en cada columna por separado. Rango bruto por dimensión por columna: mínimo 24 (1 punto × 24 grupos), máximo 96 (4 puntos × 24 grupos). Normalizar a 0-100: (puntaje_bruto - 24) / 72 × 100. El perfil dominante de cada columna es la dimensión con mayor puntaje normalizado. Columna I = Máscara, Columna II = Natural (perfil base), Columna III = Bajo presión.",
+    "rangos_normalizados": {
+      "alto": ">= 65",
+      "medio": "40-64",
+      "bajo": "< 40"
+    },
+    "clave_dimension_por_grupo": {
+      "G01": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G02": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G03": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G04": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G05": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G06": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G07": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G08": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G09": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G10": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G11": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G12": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G13": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G14": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G15": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G16": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G17": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G18": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G19": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G20": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G21": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G22": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G23": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      },
+      "G24": {
+        "A": "D",
+        "B": "I",
+        "C": "S",
+        "D": "C"
+      }
+    },
+    "codigo_apps_script": "// ============================================================\n// DISC-GJ v1.0 — Calificador para Google Apps Script\n// GastroJobs — Propiedad de The Hap&D Co.\n// ============================================================\n//\n// ENTRADA: respuestas = {\n//   columna_I: [\n//     { grupo: 'G01', A: 3, B: 4, C: 1, D: 2 },  // valores 1-4\n//     ...\n//   ],\n//   columna_II: [ ... ],\n//   columna_III: [ ... ]\n// }\n//\n// SALIDA: objeto con puntajes normalizados 0-100 y perfiles dominantes\n// ============================================================\n\nconst CLAVE_DISC_GJ = {\n  G01:{A:'D',B:'I',C:'S',D:'C'},\n  G02:{A:'D',B:'I',C:'S',D:'C'},\n  G03:{A:'D',B:'I',C:'S',D:'C'},\n  G04:{A:'D',B:'I',C:'S',D:'C'},\n  G05:{A:'D',B:'I',C:'S',D:'C'},\n  G06:{A:'D',B:'I',C:'S',D:'C'},\n  G07:{A:'D',B:'I',C:'S',D:'C'},\n  G08:{A:'D',B:'I',C:'S',D:'C'},\n  G09:{A:'D',B:'I',C:'S',D:'C'},\n  G10:{A:'D',B:'I',C:'S',D:'C'},\n  G11:{A:'D',B:'I',C:'S',D:'C'},\n  G12:{A:'D',B:'I',C:'S',D:'C'},\n  G13:{A:'D',B:'I',C:'S',D:'C'},\n  G14:{A:'D',B:'I',C:'S',D:'C'},\n  G15:{A:'D',B:'I',C:'S',D:'C'},\n  G16:{A:'D',B:'I',C:'S',D:'C'},\n  G17:{A:'D',B:'I',C:'S',D:'C'},\n  G18:{A:'D',B:'I',C:'S',D:'C'},\n  G19:{A:'D',B:'I',C:'S',D:'C'},\n  G20:{A:'D',B:'I',C:'S',D:'C'},\n  G21:{A:'D',B:'I',C:'S',D:'C'},\n  G22:{A:'D',B:'I',C:'S',D:'C'},\n  G23:{A:'D',B:'I',C:'S',D:'C'},\n  G24:{A:'D',B:'I',C:'S',D:'C'}\n};\n\nfunction calcularDISC_GJ(respuestas) {\n  const COLUMNAS = ['columna_I', 'columna_II', 'columna_III'];\n  const resultado = {};\n\n  COLUMNAS.forEach(col => {\n    const scores = { D: 0, I: 0, S: 0, C: 0 };\n\n    respuestas[col].forEach(fila => {\n      const grupo = fila.grupo;\n      const clave = CLAVE_DISC_GJ[grupo];\n      if (!clave) return;\n\n      // A, B, C, D — cada uno tiene un valor 1-4 asignado por el candidato\n      ['A','B','C','D'].forEach(opcion => {\n        const dim = clave[opcion];\n        const puntos = fila[opcion];\n        // Validar que el valor sea entre 1 y 4\n        if (typeof puntos === 'number' && puntos >= 1 && puntos <= 4) {\n          scores[dim] += puntos;\n        }\n      });\n    });\n\n    // Normalizar a 0-100: (bruto - 24) / 72 * 100\n    const normalizado = {};\n    Object.keys(scores).forEach(dim => {\n      normalizado[dim] = Math.round((scores[dim] - 24) / 72 * 100);\n    });\n\n    // Perfil dominante = dimensión con mayor puntaje\n    const dominante = Object.keys(normalizado).reduce((a, b) =>\n      normalizado[a] >= normalizado[b] ? a : b\n    );\n\n    resultado[col] = {\n      brutos: scores,\n      normalizados: normalizado,\n      dominante: dominante,\n      perfil_label: col === 'columna_I' ? 'Mascara' :\n                    col === 'columna_II' ? 'Natural' : 'Bajo_presion'\n    };\n  });\n\n  // Calcular índice de congruencia entre Natural y Bajo presión\n  const natural = resultado['columna_II'].dominante;\n  const presion = resultado['columna_III'].dominante;\n  resultado['meta'] = {\n    perfil_natural: natural,\n    perfil_bajo_presion: presion,\n    congruente: natural === presion,\n    nota: natural === presion\n      ? 'El candidato mantiene su estilo bajo presión.'\n      : 'El candidato cambia su estilo bajo presión: de ' + natural + ' a ' + presion + '.'\n  };\n\n  return resultado;\n}\n\n// ============================================================\n// VALIDADOR DE RESPUESTAS (usar antes de calcular)\n// Verifica que cada grupo tenga exactamente los valores 1,2,3,4\n// ============================================================\nfunction validarRespuestasDISC(respuestas) {\n  const COLUMNAS = ['columna_I', 'columna_II', 'columna_III'];\n  const errores = [];\n\n  COLUMNAS.forEach(col => {\n    if (!respuestas[col] || respuestas[col].length !== 24) {\n      errores.push(col + ': debe tener exactamente 24 grupos.');\n      return;\n    }\n    respuestas[col].forEach(fila => {\n      const valores = ['A','B','C','D'].map(o => fila[o]).sort((a,b) => a-b);\n      if (JSON.stringify(valores) !== JSON.stringify([1,2,3,4])) {\n        errores.push(col + ' - ' + fila.grupo + ': los valores deben ser exactamente 1,2,3,4 sin repetir.');\n      }\n    });\n  });\n\n  return {\n    valido: errores.length === 0,\n    errores: errores\n  };\n}\n\n// ============================================================\n// EJEMPLO DE USO\n// ============================================================\n// const ejemplo = {\n//   columna_I: [\n//     { grupo: 'G01', A: 4, B: 3, C: 1, D: 2 },\n//     // ... 23 grupos más\n//   ],\n//   columna_II: [ ... ],\n//   columna_III: [ ... ]\n// };\n//\n// const validacion = validarRespuestasDISC(ejemplo);\n// if (validacion.valido) {\n//   const resultado = calcularDISC_GJ(ejemplo);\n//   Logger.log(JSON.stringify(resultado, null, 2));\n// } else {\n//   Logger.log('Errores de validación:', validacion.errores);\n// }\n// ============================================================\n\n// ============================================================\n// FIT POR PUESTO — referencia para skill psicometrico\n// ============================================================\n// GG / Chef Ejecutivo:      D alto (dominante decisivo)\n// Gerente de Servicio:      I alto (influye en el equipo de sala)\n// Mesero / Hostess:         I alto (relación con el cliente)\n// Sous Chef:                C alto (precisión, control de recetas)\n// Ayudante de Cocina:       S alto (constancia, apoyo, ritmo)\n// Ayudante de Barra:        C o S según carga analítica del puesto\n// Pizzero (Luchito):        D o C (iniciativa + precisión)\n// Técnico de Mantenimiento: C alto (diagnóstico sistemático)\n// ============================================================"
+  }
+}
