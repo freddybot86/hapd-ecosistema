@@ -20,9 +20,9 @@
 // ver la nota en js/backend.js.
 // ============================================================
 const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxSrqekKxbqkzDJrZeCTLwzB7gS7iLBaFBItrKwWQXXVNp-pQganssZOkoT0QuMu8jQ/exec';
-var SPREADSHEET_ID  = '1n80iszpKLOkPit-mXruOu68AkLnz-T5nUWOE7CQdHtg';
+var DATAMAESTRO_ID  = '1n80iszpKLOkPit-mXruOu68AkLnz-T5nUWOE7CQdHtg';
 var MAESTRO_ID      = '1oqpEQRoeqnxS2Cr1TXl07xyIjY_HhoQNOR7vU2mFX6g';
-var HOJA_CANDIDATOS = '9_Cartera_Candidatos';
+var HOJA_CARTERA = '9_Cartera_Candidatos';
 var HOJA_TIENDAS    = '2_Tiendas';
 
 var PUESTOS_GERENCIALES = [
@@ -71,9 +71,9 @@ function doPost(e) {
 function validarCandidato(celular) {
   if (!celular) return { status: 'error', mensaje: 'Celular requerido' };
 
-  var ss   = SpreadsheetApp.openById(SPREADSHEET_ID);
-  var hoja = ss.getSheetByName(HOJA_CANDIDATOS);
-  if (!hoja) return { status: 'error', mensaje: 'Hoja no encontrada: ' + HOJA_CANDIDATOS };
+  var ss   = SpreadsheetApp.openById(DATAMAESTRO_ID);
+  var hoja = ss.getSheetByName(HOJA_CARTERA);
+  if (!hoja) return { status: 'error', mensaje: 'Hoja no encontrada: ' + HOJA_CARTERA };
 
   var datos   = hoja.getDataRange().getValues();
   var headers = datos[0].map(function(h) { return String(h).trim(); });
@@ -82,10 +82,16 @@ function validarCandidato(celular) {
   if (iCel === -1) iCel = headers.indexOf('ID_Candidato');
   if (iCel === -1) return { status: 'error', mensaje: 'Columna Celular no encontrada' };
 
-  var iNom = headers.indexOf('Nombre');
-  var iApe = headers.indexOf('Apellidos');
-  var iPue = headers.indexOf('Puesto_Aplicado');
-  var iSuc = headers.indexOf('Sucursal');
+  var iNom    = headers.indexOf('Nombre');
+  var iApe    = headers.indexOf('Apellidos');
+  var iPue    = headers.indexOf('Puesto_Aplicado');
+  var iSuc    = headers.indexOf('Sucursal');
+  var iAnosE  = headers.indexOf('Anos_Exp_Puesto');
+  var iNumE   = headers.indexOf('Num_Empleos_12m');
+  var iEmp1   = headers.indexOf('Emp1_Motivo_Salida');
+  var iEmp2   = headers.indexOf('Emp2_Motivo_Salida');
+  var iEmp3   = headers.indexOf('Emp3_Motivo_Salida');
+  var iRF     = headers.indexOf('Motivo_Descarte_RedFlags');
 
   var celStr = String(celular).trim();
 
@@ -94,12 +100,18 @@ function validarCandidato(celular) {
 
     var puesto = iPue !== -1 ? String(datos[i][iPue] || '').trim() : '';
     return {
-      status:    'ok',
-      nombre:    iNom !== -1 ? String(datos[i][iNom] || '').trim() : '',
-      apellidos: iApe !== -1 ? String(datos[i][iApe] || '').trim() : '',
-      puesto:    puesto,
-      sucursal:  iSuc !== -1 ? String(datos[i][iSuc] || '').trim() : '',
-      nivel:     esGerencial(puesto) ? 'gerencial' : 'operativo'
+      status:             'ok',
+      nombre:             iNom  !== -1 ? String(datos[i][iNom]  || '').trim() : '',
+      apellidos:          iApe  !== -1 ? String(datos[i][iApe]  || '').trim() : '',
+      puesto:             puesto,
+      sucursal:           iSuc  !== -1 ? String(datos[i][iSuc]  || '').trim() : '',
+      nivel:              esGerencial(puesto) ? 'gerencial' : 'operativo',
+      anos_exp:           iAnosE !== -1 ? String(datos[i][iAnosE] || '').trim() : '',
+      num_empleos_12m:    iNumE  !== -1 ? Number(datos[i][iNumE]  || 0)          : 0,
+      emp1_motivo_salida: iEmp1  !== -1 ? String(datos[i][iEmp1]  || '').trim() : '',
+      emp2_motivo_salida: iEmp2  !== -1 ? String(datos[i][iEmp2]  || '').trim() : '',
+      emp3_motivo_salida: iEmp3  !== -1 ? String(datos[i][iEmp3]  || '').trim() : '',
+      red_flags:          iRF    !== -1 ? String(datos[i][iRF]    || '').trim() : ''
     };
   }
   return { status: 'no_encontrado' };
@@ -114,7 +126,7 @@ function esGerencial(puesto) {
 function obtenerPin(sucursal) {
   if (!sucursal) return { status: 'error', mensaje: 'Sucursal requerida' };
 
-  var ss   = SpreadsheetApp.openById(SPREADSHEET_ID);
+  var ss   = SpreadsheetApp.openById(DATAMAESTRO_ID);
   var hoja = ss.getSheetByName(HOJA_TIENDAS);
   if (!hoja) return { status: 'error', mensaje: 'Hoja no encontrada: ' + HOJA_TIENDAS };
 
@@ -144,8 +156,8 @@ function guardarResultados(body) {
   var discData  = body.resultados_disc  || [];
   var big5Data  = body.resultados_big5  || null;
 
-  var ss      = SpreadsheetApp.openById(SPREADSHEET_ID);
-  var hoja    = ss.getSheetByName(HOJA_CANDIDATOS);
+  var ss      = SpreadsheetApp.openById(DATAMAESTRO_ID);
+  var hoja    = ss.getSheetByName(HOJA_CARTERA);
   var datos   = hoja.getDataRange().getValues();
   var headers = datos[0].map(function(h) { return String(h).trim(); });
 

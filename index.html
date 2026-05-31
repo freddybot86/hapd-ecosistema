@@ -466,15 +466,50 @@
   </section>
 
   <!-- ═══════════════════════════════════════
-       PANTALLA 5 — CIERRE GERENTE (PIN)
+       PANTALLA 5 — CIERRE GERENTE (modo piloto)
   ═══════════════════════════════════════ -->
   <section id="screen-cierre-gerente" class="screen">
-    <div id="gerente-resultado" class="gerente-resultado">
-      <div id="gerente-resultado-icono" class="gerente-resultado-icono"></div>
-      <p id="gerente-resultado-veredicto" class="gerente-resultado-veredicto"></p>
-      <p id="gerente-resultado-nombre" class="gerente-resultado-nombre"></p>
+
+    <!-- Panel principal -->
+    <div id="gerente-panel" class="gerente-panel">
+
+      <div class="gerente-panel-header">
+        <p class="gerente-tag">Evaluación completada</p>
+        <h2 class="gerente-titulo">Candidato listo para entrevista</h2>
+      </div>
+
+      <div class="gerente-candidato-card">
+        <p class="gerente-candidato-nombre" id="ger-nombre"></p>
+        <div class="gerente-candidato-meta">
+          <span id="ger-puesto"></span>
+          <span class="gerente-sep"> · </span>
+          <span id="ger-sucursal"></span>
+        </div>
+      </div>
+
+      <div class="gerente-resumen">
+        <p class="gerente-resumen-label">Resumen de experiencia</p>
+        <p class="gerente-resumen-texto" id="ger-resumen"></p>
+      </div>
+
+      <div class="gerente-redflags" id="ger-redflags" hidden>
+        <p class="gerente-redflags-titulo">⚠️ Puntos a indagar en entrevista</p>
+        <p class="gerente-redflags-texto" id="ger-redflags-texto"></p>
+      </div>
+
+      <button id="btn-iniciar-entrevista" class="btn-gold">Iniciar entrevista</button>
       <button id="btn-nueva-evaluacion" class="btn-nueva-evaluacion">Nueva evaluación</button>
+
     </div>
+
+    <!-- Pantalla de cierre post-entrevista -->
+    <div id="gerente-fin" class="gerente-fin" hidden>
+      <p class="gerente-fin-icono">✓</p>
+      <p class="gerente-fin-titulo">Gracias.</p>
+      <p class="gerente-fin-sub">Que tengas una excelente entrevista.</p>
+      <button id="btn-nueva-evaluacion-fin" class="btn-nueva-evaluacion">Nueva evaluación</button>
+    </div>
+
   </section>
 
   <script src="js/app.js"></script>

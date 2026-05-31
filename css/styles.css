@@ -927,77 +927,148 @@ html, body {
 }
 
 /* ════════════════════════════════════════════════════════
-   PANTALLA — CIERRE GERENTE
+   PANTALLA — CIERRE GERENTE (modo piloto)
    ════════════════════════════════════════════════════════ */
 
 #screen-cierre-gerente {
   flex-direction: column;
+  overflow-y: auto;
 }
 
-.gerente-resultado {
+/* ─── Panel principal ──────────────────────────────────── */
+.gerente-panel {
+  width: 100%;
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 40px 28px 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gerente-panel-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gerente-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.gerente-titulo {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+/* ─── Tarjeta del candidato ────────────────────────────── */
+.gerente-candidato-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gerente-candidato-nombre {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.gerente-candidato-meta {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.gerente-sep { margin: 0 2px; }
+
+/* ─── Resumen de experiencia ───────────────────────────── */
+.gerente-resumen {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gerente-resumen-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.gerente-resumen-texto {
+  font-size: 16px;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+/* ─── Red flags (fondo ámbar) ──────────────────────────── */
+.gerente-redflags {
+  background: rgba(200, 150, 0, 0.08);
+  border: 1px solid rgba(200, 150, 0, 0.35);
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gerente-redflags-titulo {
+  font-size: 13px;
+  font-weight: 700;
+  color: #C8A020;
+}
+
+.gerente-redflags-texto {
+  font-size: 15px;
+  color: #E0C870;
+  line-height: 1.55;
+}
+
+/* ─── Pantalla post-entrevista ─────────────────────────── */
+.gerente-fin {
   flex: 1;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 28px;
-  padding: 48px 28px;
+  gap: 16px;
   text-align: center;
+  padding: 48px 28px;
 }
 
-.gerente-resultado.continua {
-  background: #051208;
+.gerente-fin-icono {
+  font-size: 52px;
+  color: var(--gold);
 }
 
-.gerente-resultado.terminado {
-  background: #120505;
-}
-
-.gerente-resultado-icono {
-  width: 108px;
-  height: 108px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 56px;
+.gerente-fin-titulo {
+  font-size: 36px;
   font-weight: 700;
-}
-
-.gerente-resultado.continua .gerente-resultado-icono {
-  background: rgba(76, 175, 80, 0.12);
-  border: 3px solid #4CAF50;
-  color: #4CAF50;
-}
-
-.gerente-resultado.terminado .gerente-resultado-icono {
-  background: rgba(224, 82, 82, 0.12);
-  border: 3px solid var(--error);
-  color: var(--error);
-}
-
-.gerente-resultado-veredicto {
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  line-height: 1.25;
-  max-width: 380px;
-}
-
-.gerente-resultado.continua .gerente-resultado-veredicto {
-  color: #4CAF50;
-}
-
-.gerente-resultado.terminado .gerente-resultado-veredicto {
-  color: var(--error);
-}
-
-.gerente-resultado-nombre {
-  font-size: 22px;
-  font-weight: 600;
   color: var(--text);
+}
+
+.gerente-fin-sub {
+  font-size: 20px;
+  color: var(--muted);
+  line-height: 1.55;
+  max-width: 360px;
 }
 
 .btn-nueva-evaluacion {

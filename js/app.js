@@ -15,14 +15,20 @@ const SCREENS = {
 };
 
 const session = {
-  candidatoId:    null,
-  nombre:         null,
-  puesto:         null,
-  sucursal:       null,
-  nivel:          null,   // 'operativo' | 'gerencial'
-  pruebas:        [],
-  resultados:     {},
-  veredictoFinal: 'CONTINÚA',
+  candidatoId:        null,
+  nombre:             null,
+  puesto:             null,
+  sucursal:           null,
+  nivel:              null,   // 'operativo' | 'gerencial'
+  pruebas:            [],
+  resultados:         {},
+  veredictoFinal:     'CONTINÚA',
+  anos_exp:           null,
+  num_empleos_12m:    null,
+  emp1_motivo_salida: null,
+  emp2_motivo_salida: null,
+  emp3_motivo_salida: null,
+  red_flags:          null,
 };
 
 function goTo(screenId) {
@@ -87,11 +93,17 @@ function initLogin() {
       feedback.textContent = '✅ Registro encontrado';
       feedback.className   = 'login-feedback success';
       btnContinuar.hidden  = false;
-      session.candidatoId  = celular;
-      session.nombre       = [data.nombre, data.apellidos].filter(Boolean).join(' ');
-      session.puesto       = data.puesto;
-      session.sucursal     = data.sucursal;
-      session.nivel        = data.nivel;
+      session.candidatoId        = celular;
+      session.nombre             = [data.nombre, data.apellidos].filter(Boolean).join(' ');
+      session.puesto             = data.puesto;
+      session.sucursal           = data.sucursal;
+      session.nivel              = data.nivel;
+      session.anos_exp           = data.anos_exp           || '';
+      session.num_empleos_12m    = data.num_empleos_12m    ?? 0;
+      session.emp1_motivo_salida = data.emp1_motivo_salida || '';
+      session.emp2_motivo_salida = data.emp2_motivo_salida || '';
+      session.emp3_motivo_salida = data.emp3_motivo_salida || '';
+      session.red_flags          = data.red_flags          || '';
     } else if (data.status === 'no_encontrado') {
       feedback.textContent = 'Este número no está en nuestro sistema. Verifica que sea el mismo con el que platicaste con Freddy, o escríbenos al WhatsApp 56 4871 3095.';
       feedback.className   = 'login-feedback error';
@@ -193,7 +205,7 @@ function initCierreCandidato() {
 
     const pinValido = pinGerente || '9999';
     if (pin === pinValido) {
-      initCierreGerente(session.veredictoFinal, session.nombre);
+      initCierreGerente();
       goTo(SCREENS.CIERRE_GERENTE);
     } else {
       intentos++;
@@ -213,23 +225,50 @@ function initCierreCandidato() {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   PANTALLA 5 — CIERRE GERENTE
+   PANTALLA 5 — CIERRE GERENTE (modo piloto: sin veredicto)
    ═══════════════════════════════════════════════════════════ */
 
-function initCierreGerente(veredicto, nombre) {
-  const resultado   = document.getElementById('gerente-resultado');
-  const icono       = document.getElementById('gerente-resultado-icono');
-  const textoVeredicto = document.getElementById('gerente-resultado-veredicto');
-  const textoNombre = document.getElementById('gerente-resultado-nombre');
+function initCierreGerente() {
+  // Tarjeta del candidato
+  document.getElementById('ger-nombre').textContent   = session.nombre   || '';
+  document.getElementById('ger-puesto').textContent   = session.puesto   || '';
+  document.getElementById('ger-sucursal').textContent = session.sucursal || '';
 
-  const esContinua = veredicto === 'CONTINÚA';
+  // Resumen de experiencia
+  const anosExp  = session.anos_exp;
+  const numEmp   = session.num_empleos_12m;
+  const motivos  = [
+    session.emp1_motivo_salida,
+    session.emp2_motivo_salida,
+    session.emp3_motivo_salida,
+  ].filter(m => m && m.trim());
 
-  resultado.classList.remove('continua', 'terminado');
-  resultado.classList.add(esContinua ? 'continua' : 'terminado');
+  let resumen = '';
+  if (anosExp) {
+    resumen += `Tiene ${anosExp} ${anosExp === '1' ? 'año' : 'años'} de experiencia como ${session.puesto || 'este puesto'}. `;
+  }
+  if (numEmp !== null && numEmp !== undefined) {
+    resumen += `En los últimos 12 meses ha tenido ${numEmp} ${numEmp === 1 ? 'empleo' : 'empleos'}. `;
+  }
+  if (motivos.length > 0) {
+    resumen += `Motivos de salida: ${motivos.join('; ')}.`;
+  }
+  document.getElementById('ger-resumen').textContent =
+    resumen.trim() || 'Sin información de experiencia previa.';
 
-  icono.textContent           = esContinua ? '✓' : '✗';
-  textoVeredicto.textContent  = esContinua ? 'Continúa al proceso' : 'Proceso terminado';
-  textoNombre.textContent     = nombre || '';
+  // Red flags (solo si hay contenido)
+  const rfSection = document.getElementById('ger-redflags');
+  const rfTexto   = (session.red_flags || '').trim();
+  if (rfTexto) {
+    document.getElementById('ger-redflags-texto').textContent = rfTexto;
+    rfSection.hidden = false;
+  } else {
+    rfSection.hidden = true;
+  }
+
+  // Restablecer vista: mostrar panel, ocultar pantalla "fin"
+  document.getElementById('gerente-panel').hidden = false;
+  document.getElementById('gerente-fin').hidden   = true;
 }
 
 function resetApp() {
@@ -244,10 +283,22 @@ function resetApp() {
   if ('respuestas_zavic' in session) delete session.respuestas_zavic;
   if ('respuestas_disc'  in session) delete session.respuestas_disc;
   if ('respuestas_big5'  in session) delete session.respuestas_big5;
-  if ('score_psico'      in session) delete session.score_psico;
-  if ('pendingSync'      in session) delete session.pendingSync;
-  session.sucursal = null;
+  if ('score_psico' in session) delete session.score_psico;
+  if ('pendingSync' in session) delete session.pendingSync;
+  session.sucursal           = null;
+  session.anos_exp           = null;
+  session.num_empleos_12m    = null;
+  session.emp1_motivo_salida = null;
+  session.emp2_motivo_salida = null;
+  session.emp3_motivo_salida = null;
+  session.red_flags          = null;
   if (typeof pinGerente !== 'undefined') pinGerente = null;
+
+  // Resetear pantalla gerente al estado inicial
+  const gerPanel = document.getElementById('gerente-panel');
+  const gerFin   = document.getElementById('gerente-fin');
+  if (gerPanel) gerPanel.hidden = false;
+  if (gerFin)   gerFin.hidden   = true;
 
   // Reinicia login
   document.getElementById('input-celular').value    = '';
@@ -295,4 +346,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.getElementById('btn-nueva-evaluacion').addEventListener('click', resetApp);
+  document.getElementById('btn-nueva-evaluacion-fin').addEventListener('click', resetApp);
+
+  document.getElementById('btn-iniciar-entrevista').addEventListener('click', () => {
+    document.getElementById('gerente-panel').hidden = true;
+    document.getElementById('gerente-fin').hidden   = false;
+  });
 });

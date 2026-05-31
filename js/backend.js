@@ -45,12 +45,18 @@ async function postWebApp(payload) {
 async function verificarCandidato(celular) {
   if (!WEB_APP_URL) {
     return {
-      status:    'ok',
-      nombre:    'Demo',
-      apellidos: 'Candidato',
-      puesto:    'Mesero',
-      sucursal:  'Carso',
-      nivel:     'operativo',
+      status:             'ok',
+      nombre:             'Demo',
+      apellidos:          'Candidato',
+      puesto:             'Mesero',
+      sucursal:           'Carso',
+      nivel:              'operativo',
+      anos_exp:           '2',
+      num_empleos_12m:    1,
+      emp1_motivo_salida: 'Mejor oportunidad económica',
+      emp2_motivo_salida: '',
+      emp3_motivo_salida: '',
+      red_flags:          '',
     };
   }
   try {
