@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
+h/* ═══════════════════════════════════════════════════════════
    GastroJobs Psico — Core
    ═══════════════════════════════════════════════════════════ */
 
@@ -9,6 +9,7 @@ const SCREENS = {
   TRANSICION:       'screen-transicion',
   DISC:             'screen-disc',
   TRANSICION_B3:    'screen-transicion-b3',
+  BIG5:             'screen-big5',
   PROCESANDO:       'screen-procesando',
   CIERRE_CANDIDATO: 'screen-cierre-candidato',
   CIERRE_GERENTE:   'screen-cierre-gerente',
@@ -341,8 +342,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.getElementById('btn-continuar-bloque3').addEventListener('click', () => {
-    // TODO: initBigFive();
-    goTo(SCREENS.PROCESANDO);
+    goTo(SCREENS.BIG5);
+    initBig5();
   });
 
   document.getElementById('btn-nueva-evaluacion').addEventListener('click', resetApp);
