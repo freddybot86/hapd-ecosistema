@@ -431,6 +431,42 @@
   </section>
 
   <!-- ═══════════════════════════════════════
+       PANTALLA 3D — BIG FIVE (Bloque 3)
+       Solo visible para nivel gerencial
+  ═══════════════════════════════════════ -->
+  <section id="screen-big5" class="screen">
+
+    <div id="big5-header" class="bloque-header" hidden>
+      <div class="bloque-header-top">
+        <span class="bloque-tag">Bloque 3 — Situaciones laborales</span>
+        <span id="big5-counter" class="counter">00:00</span>
+      </div>
+      <div class="bloque-progress-track">
+        <div id="big5-progress-fill" class="bloque-progress-fill"></div>
+      </div>
+      <p id="big5-progreso-texto" class="bloque-progreso-texto"></p>
+    </div>
+
+    <div id="big5-body" class="big5-body" hidden>
+
+      <div class="big5-item-card">
+        <span id="big5-item-num" class="big5-item-num"></span>
+        <p id="big5-item-texto" class="big5-item-texto"></p>
+      </div>
+
+      <div class="big5-escala-wrapper">
+        <div class="big5-escala-extremos">
+          <span>Muy en<br>desacuerdo</span>
+          <span>Muy de<br>acuerdo</span>
+        </div>
+        <div id="big5-escala" class="big5-escala"></div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════
        PANTALLA 4 — CIERRE CANDIDATO
   ═══════════════════════════════════════ -->
   <section id="screen-cierre-candidato" class="screen">
@@ -517,6 +553,8 @@
   <script src="js/zavic.js"></script>
   <script src="js/disc-data.js"></script>
   <script src="js/disc.js"></script>
+  <script src="js/big5-data.js"></script>
+  <script src="js/big5.js"></script>
   <script src="js/backend.js"></script>
 </body>
 </html>
