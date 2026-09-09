@@ -510,8 +510,18 @@
     <div id="gerente-panel" class="gerente-panel">
 
       <div class="gerente-panel-header">
-        <p class="gerente-tag">Evaluación completada</p>
-        <h2 class="gerente-titulo">Candidato listo para entrevista</h2>
+        <p class="gerente-tag">EVALUACIÓN COMPLETADA</p>
+        <h2 class="gerente-titulo" id="ger-veredicto-titulo"></h2>
+      </div>
+
+      <div id="ger-score-section" style="text-align:center;margin:12px 0;">
+        <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:.08em;opacity:.6;margin-bottom:4px;">Score psicométrico</p>
+        <p id="ger-score-valor" style="font-size:2rem;font-weight:700;"></p>
+      </div>
+
+      <div id="ger-alertas-psico" hidden>
+        <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:.08em;opacity:.6;margin-bottom:4px;">⚠️ Alertas psicométricas</p>
+        <p id="ger-alertas-psico-texto" style="font-size:0.9rem;"></p>
       </div>
 
       <div class="gerente-candidato-card">
