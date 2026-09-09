@@ -117,6 +117,7 @@ async function enviarResultados() {
           ? 'CONTINÚA'
           : 'PROCESO TERMINADO';
         session.score_psico = data.score_psicometria;
+        session.alertas_psico = Array.isArray(data.alertas) ? data.alertas.join(' · ') : (data.alertas || '');
         goTo(SCREENS.CIERRE_CANDIDATO);
         return;
       }
