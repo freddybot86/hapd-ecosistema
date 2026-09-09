@@ -230,15 +230,48 @@ function initCierreCandidato() {
    ═══════════════════════════════════════════════════════════ */
 
 function initCierreGerente() {
-  // Tarjeta del candidato
+  // — Veredicto principal —
+  const veredicto  = session.veredictoFinal || 'CONTINÚA';
+  const esContinua = veredicto === 'CONTINÚA';
+
+  const tituloEl = document.getElementById('ger-veredicto-titulo');
+  if (tituloEl) {
+    tituloEl.textContent = esContinua ? 'Candidato listo para entrevista' : 'Proceso terminado';
+    tituloEl.style.color = esContinua ? '#c9a84c' : '#e05c5c';
+  }
+
+  // — Score psicométrico —
+  const scoreEl      = document.getElementById('ger-score-valor');
+  const scoreSection = document.getElementById('ger-score-section');
+  if (scoreEl && session.score_psico !== undefined && session.score_psico !== null) {
+    const score = parseFloat(session.score_psico);
+    scoreEl.textContent = isNaN(score) ? '—' : score.toFixed(1) + ' / 10';
+    scoreEl.style.color = score >= 7 ? '#4caf50' : score >= 4 ? '#c9a84c' : '#e05c5c';
+    if (scoreSection) scoreSection.hidden = false;
+  } else {
+    if (scoreSection) scoreSection.hidden = true;
+  }
+
+  // — Alertas psicométricas —
+  const alertasSection = document.getElementById('ger-alertas-psico');
+  const alertasTexto   = document.getElementById('ger-alertas-psico-texto');
+  const alertas = (session.alertas_psico || '').trim();
+  if (alertasSection && alertasTexto && alertas) {
+    alertasTexto.textContent = alertas;
+    alertasSection.hidden = false;
+  } else if (alertasSection) {
+    alertasSection.hidden = true;
+  }
+
+  // — Tarjeta del candidato —
   document.getElementById('ger-nombre').textContent   = session.nombre   || '';
   document.getElementById('ger-puesto').textContent   = session.puesto   || '';
   document.getElementById('ger-sucursal').textContent = session.sucursal || '';
 
-  // Resumen de experiencia
-  const anosExp  = session.anos_exp;
-  const numEmp   = session.num_empleos_12m;
-  const motivos  = [
+  // — Resumen de experiencia —
+  const anosExp = session.anos_exp;
+  const numEmp  = session.num_empleos_12m;
+  const motivos = [
     session.emp1_motivo_salida,
     session.emp2_motivo_salida,
     session.emp3_motivo_salida,
@@ -257,7 +290,7 @@ function initCierreGerente() {
   document.getElementById('ger-resumen').textContent =
     resumen.trim() || 'Sin información de experiencia previa.';
 
-  // Red flags (solo si hay contenido)
+  // — Red flags —
   const rfSection = document.getElementById('ger-redflags');
   const rfTexto   = (session.red_flags || '').trim();
   if (rfTexto) {
@@ -267,7 +300,11 @@ function initCierreGerente() {
     rfSection.hidden = true;
   }
 
-  // Restablecer vista: mostrar panel, ocultar pantalla "fin"
+  // — Botón entrevista: solo visible si CONTINÚA —
+  const btnEntrevista = document.getElementById('btn-iniciar-entrevista');
+  if (btnEntrevista) btnEntrevista.hidden = !esContinua;
+
+  // — Restablecer vista —
   document.getElementById('gerente-panel').hidden = false;
   document.getElementById('gerente-fin').hidden   = true;
 }
