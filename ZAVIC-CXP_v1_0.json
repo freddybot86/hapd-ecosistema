@@ -1,0 +1,498 @@
+{
+  "instrumento": "ZAVIC-CXP",
+  "version": "1.1",
+  "fecha_creacion": "2026-09-09",
+  "total_items": 15,
+  "contexto": "Puestos administrativos y financieros del Support Center — The Hap&D Co.",
+  "activacion": "Se activa cuando el campo Departamento del candidato es 'Corporativo'. NO usar para puestos operativos de restaurante.",
+  "puesto_referencia": "Analista CXP / Analista Financiero / Administrativo Corporativo",
+  "instrucciones_candidato": "Lee cada situación con calma. En cada una encontrarás cuatro opciones de lo que podrías hacer. Elige la opción que MÁS representa lo que tú harías, y también la opción que MENOS representa lo que tú harías. No hay respuestas correctas ni incorrectas — solo sé honesto/a.",
+  "nota_disenio": "Las posiciones A/B/C/D no siguen un patrón fijo. Cada ítem asigna las cuatro dimensiones (L, M, I, C) a distintas letras para evitar que el patrón sea predecible. Ver mapa_dimensiones en clave_calificacion.",
+  "items": [
+    {
+      "id": "Z01",
+      "situacion": "Al cerrar la conciliación del día, detectas una diferencia de $8,000 que sobra en el registro bancario sin soporte documental.",
+      "opciones": {
+        "A": {
+          "texto": "Registro la diferencia con nota de pendiente y notifico a mi jefe antes de salir",
+          "dimension": "L"
+        },
+        "B": {
+          "texto": "No cierro el cuadre hasta encontrar el origen — prefiero quedarme que entregar algo incorrecto",
+          "dimension": "M"
+        },
+        "C": {
+          "texto": "Lo dejo para mañana — quizás el banco actualiza su registro y cuadra solo",
+          "dimension": "I"
+        },
+        "D": {
+          "texto": "Cierro el cuadre marcando la diferencia como 'pendiente bancario' — en 24h el banco suele resolverlo solo",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "Z02",
+      "situacion": "Un proveedor te llama y te ofrece $2,000 para ti si procesas su pago esta semana, antes del ciclo normal de pagos.",
+      "opciones": {
+        "A": {
+          "texto": "Le digo que no — recibir algo así no va conmigo, independientemente de que me convenga",
+          "dimension": "M"
+        },
+        "B": {
+          "texto": "Le digo que no puedo adelantar pagos fuera del ciclo y corto la llamada sin darle más contexto",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Le digo que voy a revisar si hay margen para ajustar el calendario de ese pago y le confirmo en unos días",
+          "dimension": "C"
+        },
+        "D": {
+          "texto": "Le digo que no y le informo al CEO exactamente lo que me propuso y cuándo",
+          "dimension": "L"
+        }
+      }
+    },
+    {
+      "id": "Z03",
+      "situacion": "En una reunión con el CEO escuchas información sobre posibles cambios de sueldo que afectarán a varios empleados. Un amigo del área operativa te pregunta si sabes algo.",
+      "opciones": {
+        "A": {
+          "texto": "Le digo que no sé nada — lo que escuché en esa reunión no me corresponde compartirlo",
+          "dimension": "I"
+        },
+        "B": {
+          "texto": "Le digo que algo escuché pero que aún no es oficial — que esté tranquilo, que cuando haya algo formal se comunica bien",
+          "dimension": "C"
+        },
+        "C": {
+          "texto": "Le digo claramente que escuché algo en una reunión confidencial y que no puedo compartirlo",
+          "dimension": "L"
+        },
+        "D": {
+          "texto": "Le digo que no voy a contarle — eso que escuché no me pertenece a mí revelarlo",
+          "dimension": "M"
+        }
+      }
+    },
+    {
+      "id": "Z04",
+      "situacion": "Detectas que pagaste dos veces la misma factura de un proveedor. El monto ya salió del banco y el proveedor no ha dicho nada.",
+      "opciones": {
+        "A": {
+          "texto": "Lo dejo así por ahora — ese saldo extra lo descuento del siguiente pago sin hacer ruido",
+          "dimension": "C"
+        },
+        "B": {
+          "texto": "Notifico al CEO, documento el error y contacto al proveedor para coordinar la devolución",
+          "dimension": "L"
+        },
+        "C": {
+          "texto": "Llamo al proveedor de inmediato para avisarle y que me diga cómo prefiere manejarlo",
+          "dimension": "M"
+        },
+        "D": {
+          "texto": "Lo anoto en mis pendientes para revisarlo en el próximo ciclo de conciliación mensual",
+          "dimension": "I"
+        }
+      }
+    },
+    {
+      "id": "Z05",
+      "situacion": "Es fin de mes y el corte de gastos tiene una diferencia de $15,000. Tu jefe te pide que ajustes unos registros para que el reporte al CEO salga limpio.",
+      "opciones": {
+        "A": {
+          "texto": "Le digo que no puedo modificar registros y propongo entregar el reporte con nota explicativa",
+          "dimension": "L"
+        },
+        "B": {
+          "texto": "Lo hago — él es el responsable del área y yo ejecuto lo que me indica",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Le explico que eso no lo puedo hacer, venga de quien venga, y busco con él otra salida",
+          "dimension": "M"
+        },
+        "D": {
+          "texto": "Lo hago, pero antes capturo su instrucción por mensaje para cubrirme si algo sale mal",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "Z06",
+      "situacion": "Tienes acceso a la banca en línea de la empresa. Necesitas urgente un dinero personal y calculas que nadie lo notaría si hicieras una transferencia pequeña que después repones.",
+      "opciones": {
+        "A": {
+          "texto": "Ni lo considero — ese acceso existe para el trabajo, no para mis finanzas personales",
+          "dimension": "M"
+        },
+        "B": {
+          "texto": "Lo transfiero como préstamo provisional y lo regularizo cuando entre mi siguiente quincena",
+          "dimension": "C"
+        },
+        "C": {
+          "texto": "No lo haría — eso es un delito y rompería la confianza que depositaron en mí",
+          "dimension": "L"
+        },
+        "D": {
+          "texto": "No lo haría, pero tampoco diría nada si veo que otro compañero hace algo similar",
+          "dimension": "I"
+        }
+      }
+    },
+    {
+      "id": "Z07",
+      "situacion": "Encuentras en el sistema una forma de cargar gastos personales menores como gastos de representación sin que el área contable lo detecte fácilmente.",
+      "opciones": {
+        "A": {
+          "texto": "No lo haría, pero tampoco reporto que el sistema lo permite — no es mi trabajo auditarlo",
+          "dimension": "I"
+        },
+        "B": {
+          "texto": "Reporto la vulnerabilidad al área contable para que la corrijan y quede bien documentado",
+          "dimension": "L"
+        },
+        "C": {
+          "texto": "Lo uso para registrar un gasto que ya tiene soporte en camino — adelanto el trámite para no atrasar el cierre",
+          "dimension": "C"
+        },
+        "D": {
+          "texto": "No usaría eso aunque pudiera — los registros deben reflejar lo que realmente pasó",
+          "dimension": "M"
+        }
+      }
+    },
+    {
+      "id": "Z08",
+      "situacion": "Un ejecutivo de otra área te pide los estados financieros completos. Dice que el CEO lo autorizó verbalmente pero no tienes ningún correo ni documento que lo respalde.",
+      "opciones": {
+        "A": {
+          "texto": "Se los envío — si el CEO lo autorizó, la responsabilidad de verificarlo ya no es mía",
+          "dimension": "C"
+        },
+        "B": {
+          "texto": "Le digo que necesito confirmar directamente con el CEO antes de entregar información financiera sensible",
+          "dimension": "M"
+        },
+        "C": {
+          "texto": "Le digo que no es mi área decidirlo y lo remito con su propio jefe",
+          "dimension": "I"
+        },
+        "D": {
+          "texto": "Le pido que traiga la autorización por escrito o un correo del CEO, sin excepción",
+          "dimension": "L"
+        }
+      }
+    },
+    {
+      "id": "Z09",
+      "situacion": "Al revisar el archivo de nómina, encuentras que un empleado lleva dos meses recibiendo un bono que fue eliminado. El error no es tuyo y el empleado no sabe.",
+      "opciones": {
+        "A": {
+          "texto": "Documento el error y notifico a mi jefe y a RRHH con todos los datos para que lo corrijan",
+          "dimension": "L"
+        },
+        "B": {
+          "texto": "No digo nada por ahora — corregirlo implicaría un descuento al empleado y va a reclamar",
+          "dimension": "C"
+        },
+        "C": {
+          "texto": "Notifico aunque sea incómodo — es dinero de la empresa y el empleado tendrá que devolver lo extra",
+          "dimension": "M"
+        },
+        "D": {
+          "texto": "Lo marco como pendiente de revisión y espero a que alguien más lo detecte formalmente",
+          "dimension": "I"
+        }
+      }
+    },
+    {
+      "id": "Z10",
+      "situacion": "Recibes un correo de alguien que dice ser auditor externo y te solicita los estados de cuenta bancarios de los últimos seis meses sin pasar por tu jefe.",
+      "opciones": {
+        "A": {
+          "texto": "No envío nada — aunque sea auditor externo, esa información no la comparto sin validar con mi jefe",
+          "dimension": "M"
+        },
+        "B": {
+          "texto": "Le digo que ese tipo de solicitudes las maneja la dirección directamente, sin dar más información",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Le pido que su solicitud venga formal y por escrito, con copia a mi jefe, antes de enviar cualquier cosa",
+          "dimension": "L"
+        },
+        "D": {
+          "texto": "Le mando lo que pide — si es auditor externo, igual va a tener acceso a eso más adelante",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "Z11",
+      "situacion": "Detectas que un pago de $40,000 fue aprobado con una firma que no coincide con la del responsable autorizado. El dinero ya salió de la cuenta.",
+      "opciones": {
+        "A": {
+          "texto": "Lo anoto como observación interna — si nadie más lo detectó, quizás fue un error administrativo menor",
+          "dimension": "I"
+        },
+        "B": {
+          "texto": "Lo reporto de inmediato — una firma incorrecta en un pago de ese monto no es algo que deba ignorar",
+          "dimension": "M"
+        },
+        "C": {
+          "texto": "Reviso si ese mismo método funcionaría para agilizar otros pagos que llevan semanas en espera",
+          "dimension": "C"
+        },
+        "D": {
+          "texto": "Genero un reporte formal del hallazgo y lo entrego al CEO y al área legal con toda la documentación",
+          "dimension": "L"
+        }
+      }
+    },
+    {
+      "id": "Z12",
+      "situacion": "Encuentras que las contraseñas de acceso a las cuentas bancarias de la empresa están guardadas en un archivo que también puede ver un colaborador sin autorización.",
+      "opciones": {
+        "A": {
+          "texto": "Lo dejo así — cambiarlas implica coordinación con el banco y no quiero generar trabajo extra ahora",
+          "dimension": "C"
+        },
+        "B": {
+          "texto": "No hago nada — mientras nadie las use mal, no hay un problema real todavía",
+          "dimension": "I"
+        },
+        "C": {
+          "texto": "Notifico a mi jefe de inmediato y solicito cambio de contraseñas y restricción de acceso",
+          "dimension": "L"
+        },
+        "D": {
+          "texto": "No espero instrucciones — cambio el acceso yo mismo y después explico por qué lo hice",
+          "dimension": "M"
+        }
+      }
+    },
+    {
+      "id": "Z13",
+      "situacion": "Un arrendador de una de las sucursales te llama directamente para pedirte que adelantes la renta. Te ofrece algo a cambio si lo procesas sin pasar por la autorización de tu jefe.",
+      "opciones": {
+        "A": {
+          "texto": "Le digo que cualquier pago fuera del ciclo requiere autorización y reporto la propuesta a mi jefe",
+          "dimension": "L"
+        },
+        "B": {
+          "texto": "Le digo que no puedo hacer eso — no solo por el procedimiento, sino porque no está bien",
+          "dimension": "M"
+        },
+        "C": {
+          "texto": "Le pregunto qué tanto estaría dispuesto a dar y de qué forma para ver si realmente vale la pena",
+          "dimension": "C"
+        },
+        "D": {
+          "texto": "Le digo que no es posible sin pasar por la dirección y termino la llamada sin dar más explicaciones",
+          "dimension": "I"
+        }
+      }
+    },
+    {
+      "id": "Z14",
+      "situacion": "Encuentras un error contable que hace que la empresa aparezca debiendo más impuestos de los reales. Corregirlo te llevaría horas y el plazo de entrega al SAT es hoy.",
+      "opciones": {
+        "A": {
+          "texto": "Lo corrijo aunque se pase el plazo — entregar información incorrecta al SAT no es una opción",
+          "dimension": "M"
+        },
+        "B": {
+          "texto": "Notifico a mi jefe del error y el impacto en el plazo, y espero su instrucción antes de proceder",
+          "dimension": "L"
+        },
+        "C": {
+          "texto": "Entrego como está — ese tipo de errores se pueden aclarar después con el contador externo",
+          "dimension": "I"
+        },
+        "D": {
+          "texto": "Entrego el reporte como está y no menciono el error — si hay revisión después, digo que no lo vi",
+          "dimension": "C"
+        }
+      }
+    },
+    {
+      "id": "Z15",
+      "situacion": "Tu jefe te pide que registres un gasto personal suyo como gasto de operación de la empresa. Dice que ya tiene autorización de Dirección pero no puede mostrarte el documento.",
+      "opciones": {
+        "A": {
+          "texto": "Lo registro — si él dice que está autorizado, confío en su palabra y así me cubro yo",
+          "dimension": "C"
+        },
+        "B": {
+          "texto": "Sin el documento de autorización no puedo registrarlo — eso es un procedimiento fijo sin excepción",
+          "dimension": "L"
+        },
+        "C": {
+          "texto": "Lo registro pero dejo una nota interna de que fue instrucción de él, no decisión mía",
+          "dimension": "I"
+        },
+        "D": {
+          "texto": "Le digo que eso no lo puedo hacer aunque venga de él — ese registro me compromete personalmente",
+          "dimension": "M"
+        }
+      }
+    }
+  ],
+  "clave_calificacion": {
+    "version": "CXP-1.0",
+    "algoritmo": "Apps Script — ZAVIC-CXP",
+    "diferencia_vs_zavic_operativo": "Posiciones de dimensiones randomizadas por ítem. Scoring corregido: I y C suman cuando el candidato las ELIGE como MÁS, no cuando las rechaza. Umbrales más estrictos acordes al acceso financiero del puesto.",
+    "dimensiones": {
+      "L": {
+        "nombre": "Legalidad",
+        "tipo": "positivo",
+        "descripcion": "Respeto a normas y procedimientos institucionales"
+      },
+      "M": {
+        "nombre": "Moral",
+        "tipo": "positivo",
+        "descripcion": "Principios éticos personales internalizados — actúa bien aunque no lo vean"
+      },
+      "I": {
+        "nombre": "Indiferencia",
+        "tipo": "negativo",
+        "descripcion": "Actitud pasiva ante situaciones que requieren acción o denuncia"
+      },
+      "C": {
+        "nombre": "Corrupción",
+        "tipo": "negativo",
+        "descripcion": "Disposición a saltarse reglas o principios éticos por beneficio propio"
+      }
+    },
+    "mapa_dimensiones": {
+      "Z01": {
+        "A": "L",
+        "B": "M",
+        "C": "I",
+        "D": "C"
+      },
+      "Z02": {
+        "A": "M",
+        "B": "I",
+        "C": "C",
+        "D": "L"
+      },
+      "Z03": {
+        "A": "I",
+        "B": "C",
+        "C": "L",
+        "D": "M"
+      },
+      "Z04": {
+        "A": "C",
+        "B": "L",
+        "C": "M",
+        "D": "I"
+      },
+      "Z05": {
+        "A": "L",
+        "B": "I",
+        "C": "M",
+        "D": "C"
+      },
+      "Z06": {
+        "A": "M",
+        "B": "C",
+        "C": "L",
+        "D": "I"
+      },
+      "Z07": {
+        "A": "I",
+        "B": "L",
+        "C": "C",
+        "D": "M"
+      },
+      "Z08": {
+        "A": "C",
+        "B": "M",
+        "C": "I",
+        "D": "L"
+      },
+      "Z09": {
+        "A": "L",
+        "B": "C",
+        "C": "M",
+        "D": "I"
+      },
+      "Z10": {
+        "A": "M",
+        "B": "I",
+        "C": "L",
+        "D": "C"
+      },
+      "Z11": {
+        "A": "I",
+        "B": "M",
+        "C": "C",
+        "D": "L"
+      },
+      "Z12": {
+        "A": "C",
+        "B": "I",
+        "C": "L",
+        "D": "M"
+      },
+      "Z13": {
+        "A": "L",
+        "B": "M",
+        "C": "C",
+        "D": "I"
+      },
+      "Z14": {
+        "A": "M",
+        "B": "L",
+        "C": "I",
+        "D": "C"
+      },
+      "Z15": {
+        "A": "C",
+        "B": "L",
+        "C": "I",
+        "D": "M"
+      }
+    },
+    "logica_puntuacion": {
+      "mas_dimension_L": "+2 a Legalidad",
+      "mas_dimension_M": "+2 a Moral",
+      "mas_dimension_I": "+2 a Indiferencia (candidato elige comportamiento indiferente)",
+      "mas_dimension_C": "+2 a Corrupcion (candidato elige comportamiento corrupto)",
+      "menos_cualquiera": "0 puntos — el rechazo no suma ni resta en ninguna dimensión"
+    },
+    "puntaje_maximo_bruto_por_dimension": 30,
+    "metrica_etica_combinada": {
+      "formula": "(L_bruto + M_bruto) / 30 * 100",
+      "descripcion": "Un candidato siempre ético puede alternar entre elegir L o M sin penalización. La ética combinada puede llegar a 100 aunque el candidato nunca elija la misma dimensión dos veces seguidas.",
+      "maximo_posible": 100
+    },
+    "criterios_corte_CXP": {
+      "Etica_combinada": {
+        "PASA": "75-100",
+        "ALERTA": "55-74",
+        "DESCARTE": "0-54",
+        "nota": "Menos de 60 puntos de ética combinada significa que el candidato eligió I o C como MÁS en 3 o más ítems"
+      },
+      "Indiferencia": {
+        "PASA": "0-13",
+        "ALERTA": "14-26",
+        "DESCARTE": "27-100",
+        "nota": "Dos elecciones indiferentes como MÁS = ALERTA. Tres o más = DESCARTE. Más estricto que operativo por naturaleza del puesto."
+      },
+      "Corrupcion": {
+        "PASA": "0-6",
+        "ALERTA": "7-13",
+        "DESCARTE": "14-100",
+        "nota": "Una sola elección corrupta como MÁS = ALERTA. Dos o más = DESCARTE. Aplica regla cero tolerancia por acceso a banca."
+      }
+    },
+    "regla_absoluta": "Un solo DESCARTE en cualquier dimensión termina el proceso. No se compensan con puntajes altos en otras dimensiones. Para puestos con acceso a banca institucional y nómina, Corrupción ≥ 7 debe tratarse como señal de alerta obligatoria antes de avanzar a entrevista.",
+    "codigo_apps_script": "function calcularZAVIC_CXP(respuestas) {\n  /*\n   * respuestas: array de objetos { id: 'Z01', mas: 'A', menos: 'C' }\n   * Retorna: { L, M, I, C, etica_combinada } + { veredicto, descarte_motivos, alertas }\n   * DIFERENCIA VS ZAVIC OPERATIVO:\n   *   - Posiciones randomizadas: usa mapa específico por ítem\n   *   - I y C suman cuando el candidato las ELIGE como MÁS (no cuando las rechaza)\n   *   - La selección MENOS no produce puntos en ninguna dimensión\n   *   - Umbrales más estrictos: Corrupción ≥ 14 = DESCARTE, Indiferencia ≥ 27 = DESCARTE\n   */\n  const MAPA = {\n    Z01: { A: 'L', B: 'M', C: 'I', D: 'C' },\n    Z02: { A: 'M', B: 'I', C: 'C', D: 'L' },\n    Z03: { A: 'I', B: 'C', C: 'L', D: 'M' },\n    Z04: { A: 'C', B: 'L', C: 'M', D: 'I' },\n    Z05: { A: 'L', B: 'I', C: 'M', D: 'C' },\n    Z06: { A: 'M', B: 'C', C: 'L', D: 'I' },\n    Z07: { A: 'I', B: 'L', C: 'C', D: 'M' },\n    Z08: { A: 'C', B: 'M', C: 'I', D: 'L' },\n    Z09: { A: 'L', B: 'C', C: 'M', D: 'I' },\n    Z10: { A: 'M', B: 'I', C: 'L', D: 'C' },\n    Z11: { A: 'I', B: 'M', C: 'C', D: 'L' },\n    Z12: { A: 'C', B: 'I', C: 'L', D: 'M' },\n    Z13: { A: 'L', B: 'M', C: 'C', D: 'I' },\n    Z14: { A: 'M', B: 'L', C: 'I', D: 'C' },\n    Z15: { A: 'C', B: 'L', C: 'I', D: 'M' }\n  };\n\n  const scores = { L: 0, M: 0, I: 0, C: 0 };\n\n  respuestas.forEach(function(r) {\n    var dim_mas = MAPA[r.id][r.mas];\n    scores[dim_mas] += 2;\n    // La seleccion MENOS no produce puntos en ninguna dimension\n  });\n\n  var normalizado = {};\n  Object.keys(scores).forEach(function(k) {\n    normalizado[k] = Math.round(scores[k] / 30 * 100);\n  });\n\n  var etica_combinada = Math.round((scores.L + scores.M) / 30 * 100);\n\n  var descarte_motivos = [];\n  if (etica_combinada < 55) descarte_motivos.push('Etica combinada insuficiente: ' + etica_combinada);\n  if (normalizado.I >= 27) descarte_motivos.push('Indiferencia elevada: ' + normalizado.I);\n  if (normalizado.C >= 14) descarte_motivos.push('Corrupcion detectada: ' + normalizado.C);\n\n  var alertas = [];\n  if (etica_combinada >= 55 && etica_combinada < 75) alertas.push('Etica combinada en zona de atencion: ' + etica_combinada);\n  if (normalizado.I >= 14 && normalizado.I < 27) alertas.push('Indiferencia: senal de atencion: ' + normalizado.I);\n  if (normalizado.C >= 7 && normalizado.C < 14) alertas.push('Corrupcion: senal de atencion — revisar en entrevista: ' + normalizado.C);\n\n  var veredicto = descarte_motivos.length > 0 ? 'DESCARTE' :\n                  alertas.length > 0 ? 'ALERTA' : 'PASA';\n\n  return {\n    puntajes: normalizado,\n    etica_combinada: etica_combinada,\n    veredicto: veredicto,\n    descarte_motivos: descarte_motivos,\n    alertas: alertas\n  };\n}"
+  },
+  "nota_version": "v1.1 — 5 opciones de Corrupción reescritas para eliminar deseabilidad social obvia. Ahora todas las opciones son profesionalmente defendibles."
+}
