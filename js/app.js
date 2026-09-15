@@ -98,6 +98,7 @@ function initLogin() {
       session.nombre             = [data.nombre, data.apellidos].filter(Boolean).join(' ');
       session.puesto             = data.puesto;
       session.sucursal           = data.sucursal;
+      session.variante_zavic = (data.sucursal === 'Corporativo') ? 'cxp' : 'gj';
       session.nivel              = data.nivel;
       session.anos_exp           = data.anos_exp           || '';
       session.num_empleos_12m    = data.num_empleos_12m    ?? 0;
@@ -330,6 +331,7 @@ function resetApp() {
   session.emp2_motivo_salida = null;
   session.emp3_motivo_salida = null;
   session.red_flags          = null;
+  session.variante_zavic = null;
   if (typeof pinGerente !== 'undefined') pinGerente = null;
 
   // Resetear pantalla gerente al estado inicial
