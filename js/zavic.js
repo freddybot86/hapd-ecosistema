@@ -16,7 +16,7 @@ let zSeg     = 0;
 
 /* ─── Arranque: muestra la intro + práctica ─────────────── */
 function initZavic() {
-  zItems = ZAVIC_ITEMS;
+  zItems = (session.variante_zavic === 'cxp') ? ZAVIC_CXP_ITEMS : ZAVIC_ITEMS;
   session.respuestas_zavic = [];
 
   /* -- Práctica interactiva (no guarda nada) -------------- */
